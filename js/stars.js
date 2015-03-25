@@ -55,7 +55,7 @@ function animateStars(starFieldWidth, speed) {
   }
 
   setInterval(function() {
-    for (var i = 1; i < stars.length; i++) {
+    for (var 0 = 1; i < stars.length; i++) {
       stars[i].className = 'star' + ' ' + getStarColor(i);
 
       var currentLeft = parseInt(stars[i].style.left, 10);
