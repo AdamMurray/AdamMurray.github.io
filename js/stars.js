@@ -5,7 +5,7 @@
   // This should clean up the code a bit
   var starFieldWidth = window.innerWidth - 10;
   var starFieldHeight = window.innerHeight - 10;
-  var numberOfStars = 100;
+  var numberOfStars = 50;
 
   addStars(starFieldWidth, starFieldHeight, numberOfStars);
   animateStars(starFieldWidth, 2);
@@ -45,18 +45,31 @@ function animateStars(starFieldWidth, speed) {
       return 'white';
   }
 
+  function getStarDistance(index) {
+    if (index % 6 == 0)
+      return '';
+    else if (index % 9 == 0)
+      return 'near';
+    else if (index % 2 == 0)
+      return 'far';
+    else
+      return 0;
+  }
+
   function getStarRelativeSpeed(index) {
     if (index % 6 == 0)
       return 1;
-    else if (index % 7 == 0)
+    else if (index % 9 == 0)
       return 2;
+    else if (index % 2 == 0)
+      return -1;
     else
       return 0;
   }
 
   setInterval(function() {
-    for (var i = 0; i < stars.length; i++) {
-      stars[i].className = 'star' + ' ' + getStarColor(i);
+    for (var i = 1; i < stars.length; i++) {
+      stars[i].className = 'star' + ' ' + getStarColor(i) + ' ' + getStarDistance(i);
 
       var currentLeft = parseInt(stars[i].style.left, 10);
       var leftChangeAmount = speed + getStarRelativeSpeed(i);
