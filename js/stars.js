@@ -3,9 +3,11 @@
   // TODO: add json with entries for various speeds, e.g.:
   // slow, normal, fast, warp, and set numbers that correspond to them.
   // This should clean up the code a bit
-  var starFieldWidth = 1000;
+  var starFieldWidth = window.screen.width;
+  var starFieldHeight = window.screen.height;
+  var numberOfStars = 100;
 
-  addStars(starFieldWidth, 800, 100);
+  addStars(starFieldWidth, starFieldHeight, numberOfStars);
   animateStars(starFieldWidth, 2);
 
 })();
