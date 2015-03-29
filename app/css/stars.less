@@ -1,6 +1,15 @@
 // out: stars.css, compress: true
 
+// imports
+@import 'fonts.less';
+@import 'library.less';
+
+// variables
 @starDimension: 2px;
+
+body {
+  font-family: 'quicksand';
+}
 
 #star-field {
   width: 100%;
@@ -21,7 +30,7 @@
       width: @starDimension - 1;
       height: @starDimension - 1;
     }
-    
+
     &.near {
       width: @starDimension + 2;
       height: @starDimension + 2;
@@ -47,4 +56,22 @@
       box-shadow: 0 0 15px #ff4444;
     }
   }
+}
+
+#heading {
+  font-family: 'quicksand';
+  color: #000;
+  background: rgba(194, 177, 71, 0.84);
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  top: 50%;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 3em;
+  text-align: center;
+  padding: 10px;
+  .border-radius;
+  .box-sizing;
+  .translateY(-55%);
 }

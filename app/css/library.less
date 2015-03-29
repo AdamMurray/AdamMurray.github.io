@@ -1,0 +1,47 @@
+// variables
+@cardBoxShadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+@fontSizeMobile: 20px;
+
+// mixins
+.blur(@amount: 4px; @opacity: 70%) {
+  -webkit-filter: blur(@amount) opacity(@opacity);
+  filter: blur(@amount) opacity(@opacity);
+}
+
+.border-radius(@radius: 10px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.box-sizing(@type: border-box) {
+  -moz-box-sizing: @type;
+  -webkit-box-sizing: @type;
+  box-sizing: @type;
+}
+
+.rotate(@degrees: 0deg) {
+  -ms-transform: rotate(@degrees);
+  -webkit-transform: rotate(@degrees);
+  transform: rotate(@degrees);
+}
+
+.transition-delay(@time: .5s) {
+  -webkit-transition-delay: @time;
+  transition-delay: @time;
+}
+
+.transition-duration(@time: 0.4s) {
+  -moz-transition-duration: @time;
+  -o-transition-duration: @time;
+  -webkit-transition-duration: @time;
+  transition-duration: @time;
+}
+
+.translateY(@translation: -50%) {
+  -moz-transform: translateY(@translation);
+  -ms-transform: translateY(@translation);
+  -o-transform: translateY(@translation);
+  -webkit-transform: translateY(@translation);
+  transform: translateY(@translation);
+}
