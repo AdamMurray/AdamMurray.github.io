@@ -7,64 +7,78 @@
   var starFieldHeight = window.innerHeight - 10;
   var numberOfStars = 50;
 
-  addStars(starFieldWidth, starFieldHeight, numberOfStars);
+  positionStars(starFieldWidth, starFieldHeight);
   animateStars(starFieldWidth, 2);
 
+  outerTriangleOnClick();
 })();
 
-// TODO: make some stars bigger than others, and have some blue,
-// red or white
-function addStars(starFieldWidth, starFieldHeight, noOfStars) {
-  var starField = document.getElementById('star-field');
-  var numberOfStars = noOfStars;
+function outerTriangleOnClick() {
+  var triangle = document.getElementById('outer-triangle');
+  triangle.onclick = function() {
+    if (triangle.className.indexOf('clicked') != -1) {
+      triangle.className = '';
+    }
+    else {
+      triangle.className = 'clicked';
+    }
+  }
+}
 
-  for (var i = 0; i < numberOfStars; i++) {
-    var star = document.createElement('div');
-  	star.className = 'star';
+function innerTriangleOnClick() {
+  var triangle = document.getElementsByClassName('inner-triangle');
+
+}
+
+function positionStars(starFieldWidth, starFieldHeight) {
+  var starField = document.getElementById('star-field');
+  var stars = starField.children;
+
+  for (var i = 0; i < stars.length; i++) {
+    var star = stars[i];
     var topOffset = Math.floor((Math.random() * starFieldHeight) + 1);
     var leftOffset = Math.floor((Math.random() * starFieldWidth) + 1);
     star.style.top = topOffset + 'px';
     star.style.left = leftOffset + 'px';
     star.style.position = 'absolute';
-  	starField.appendChild(star);
   }
 }
 
 function animateStars(starFieldWidth, speed) {
   var starField = document.getElementById('star-field');
-  var stars = starField.childNodes;
+  var stars = starField.children;
 
   function getStarColor(index) {
     if (index % 8 == 0)
-      return 'red';
+    return 'red';
     else if (index % 10 == 0)
-      return 'yellow';
+    return 'yellow';
     else if (index % 17 == 0)
-      return 'blue';
+    return 'blue';
     else
-      return 'white';
+    return 'white';
   }
 
   function getStarDistance(index) {
     if (index % 6 == 0)
-      return '';
+    return '';
     else if (index % 9 == 0)
-      return 'near';
+    return 'near';
     else if (index % 2 == 0)
-      return 'far';
+    return 'far';
     else
-      return 0;
+    return 0;
   }
 
   function getStarRelativeSpeed(index) {
     if (index % 6 == 0)
-      return 1;
+    return 1;
     else if (index % 9 == 0)
-      return 2;
+    return 2;
     else if (index % 2 == 0)
-      return -1;
+    return -1;
     else
-      return 0;
+    return 0;
   }
 
   setInterval(function() {

@@ -4,9 +4,20 @@ html
     title Moving Stars
     link(rel="stylesheet", type="text/css", href="/app/css/stars.css")
   
-  body    
+  body
+    // TODO: create divs here and just use js to animate
+    // (should increase performance)
     #star-field
+      - for (var x = 0; x < 100; x++)
+        .star
       
     #heading Adam Murray
+    
+    #outer-triangle
+      .inner-triangle.top
+        a(href="https://github.com/AdamMurray")
+          img(src="/app/css/images/GitHub-Mark-120px-plus.png")
+      .inner-triangle.left
+      .inner-triangle.right
       
     script(type="text/javascript", src="/app/js/stars.js")

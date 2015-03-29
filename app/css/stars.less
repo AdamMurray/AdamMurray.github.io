@@ -7,6 +7,9 @@
 // variables
 @starDimension: 2px;
 
+// colours
+@gold80PercentOpaque: rgba(194, 177, 71, 0.8);
+
 body {
   font-family: 'quicksand';
 }
@@ -59,9 +62,10 @@ body {
 }
 
 #heading {
+  display: none;
   font-family: 'quicksand';
   color: #000;
-  background: rgba(194, 177, 71, 0.84);
+  background: @gold80PercentOpaque;
   position: absolute;
   left: 30%;
   right: 30%;
@@ -74,4 +78,92 @@ body {
   .border-radius;
   .box-sizing;
   .translateY(-55%);
+}
+
+#outer-triangle {
+  @borderSideWidth: 140px;
+  @borderTopHeight: @borderSideWidth * 2 * 0.866;
+
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: @borderTopHeight solid @gold80PercentOpaque;
+  border-left: @borderSideWidth solid transparent;
+  border-right: @borderSideWidth solid transparent;
+
+  &:after {
+    content: "";
+    position: absolute;
+
+  }
+
+  &.pulse {
+
+  }
+
+  &:hover,
+  &.clicked {
+    .inner-triangle {
+      opacity: 1;
+
+      &.top {
+        transform: rotateX(0deg);
+      }
+
+      &.left,
+      &.right {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+
+  .inner-triangle {
+    opacity: 0;
+    .transition-duration(1s);
+    position: absolute;
+    border-bottom: @borderTopHeight solid darken(@gold80PercentOpaque, 20%);
+    border-left: @borderSideWidth solid transparent;
+    border-right: @borderSideWidth solid transparent;
+
+    &.top {
+      top: -2 * @borderTopHeight;
+      left: -1 * @borderSideWidth;
+      transform-origin: bottom;
+      transform: rotateX(180deg);
+
+      &:hover {
+        border-bottom: @borderTopHeight solid rgba(211, 27, 27, 0.8);
+      }
+
+      img {
+        position: absolute;
+        left: -60px;
+        top: 100px;
+      }
+    }
+
+    &.left {
+      top: -1 * @borderTopHeight;
+      left: -2 * @borderSideWidth;
+      transform-origin: bottom right;
+      transform: rotateY(-90deg);
+
+      &:hover {
+        border-bottom: @borderTopHeight solid rgba(35, 178, 35, 0.8);
+      }
+    }
+
+    &.right {
+      top: -1 * @borderTopHeight;
+      transform-origin: bottom left;
+      transform: rotateY(90deg);
+
+      &:hover {
+        border-bottom: @borderTopHeight solid rgba(58, 48, 211, 0.8);
+      }
+    }
+  }
 }
