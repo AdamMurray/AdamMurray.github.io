@@ -7,19 +7,26 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1")
   
   body
-    // TODO: create divs here and just use js to animate
-    // (should increase performance)
-    #star-field
-      - for (var x = 0; x < 100; x++)
-        .star
-      
-    #heading Adam Murray
+    .top-menu
     
-    #outer-triangle
-      .inner-triangle.top
+    #star-field
+      - for (var x = 0; x < 50; x++)
+        .star
+    
+    //-#outer-triangle
+    //-  .inner-triangle.top
+    //-    a(href="https://github.com/AdamMurray", target="_blank")
+    //-      img(src="/app/css/images/GitHub-Mark-120px-plus.png")
+    //-  .inner-triangle.left
+    //-  .inner-triangle.right
+    
+    .links-wrapper
+      .links
         a(href="https://github.com/AdamMurray", target="_blank")
-          img(src="/app/css/images/GitHub-Mark-120px-plus.png")
-      .inner-triangle.left
-      .inner-triangle.right
-      
+          .link.one
+        a(href="http://codepen.io/AdamMurray/", target="_blank")    
+          .link.two
+        a(href="https://www.linkedin.com/profile/view?id=177653568", target="_blank")
+          .link.three
+    
     script(type="text/javascript", src="/app/js/stars.js")
