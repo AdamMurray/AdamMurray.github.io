@@ -7,3 +7,9 @@
     margin: 0 auto;
   }
 }
+@media all and (max-width: 700px) {
+  .links-wrapper .links .link {
+    display: block;
+    margin: 0 auto;
+  }
+}
