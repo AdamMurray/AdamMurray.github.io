@@ -8,7 +8,7 @@
   var numberOfStars = 50;
 
   positionStars(starFieldWidth, starFieldHeight);
-  animateStars(starFieldWidth, 2);
+  animateStars(starFieldWidth, 1);
 
   //outerTriangleOnClick();
 })();
@@ -92,6 +92,6 @@ function animateStars(starFieldWidth, speed) {
       stars[i].style.left = (leftDiff) + 'px';
     }
 
-  }, 20);
+  }, 30);
 
 }
