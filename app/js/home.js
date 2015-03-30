@@ -5,7 +5,6 @@
   // This should clean up the code a bit
   var starFieldWidth = window.innerWidth * 0.9;
   var starFieldHeight = window.innerHeight * 0.7;
-  var numberOfStars = 50;
 
   positionStars(starFieldWidth, starFieldHeight);
   animateStars(starFieldWidth, 1);
