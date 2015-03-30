@@ -10,19 +10,24 @@
   positionStars(starFieldWidth, starFieldHeight);
   animateStars(starFieldWidth, 1);
 
-  //outerTriangleOnClick();
+  burgerButtonOnClick();
+
 })();
 
-function outerTriangleOnClick() {
-  var triangle = document.getElementById('outer-triangle');
-  triangle.onclick = function() {
-    if (triangle.className.indexOf('clicked') != -1) {
-      triangle.className = '';
+function burgerButtonOnClick() {
+  var burgerButton = document.getElementById('burger-button');
+  var slideMenu = document.getElementById('slide-menu');
+
+  burgerButton.onclick = function() {
+    if (burgerButton.className.indexOf('clicked') != -1) {
+      burgerButton.className = '';
+      slideMenu.className = '';
     }
     else {
-      triangle.className = 'clicked';
+      burgerButton.className = 'clicked';
+      slideMenu.className = 'open';
     }
-  }
+  };
 }
 
 function positionStars(starFieldWidth, starFieldHeight) {

@@ -8,6 +8,34 @@
   }
 }
 @media all and (max-width: 700px) {
+  #top-menu #burger-button {
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    background: #c92c19;
+    width: 20%;
+  }
+  #slide-menu {
+    height: 90%;
+    width: 100%;
+    background: #ccc;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    z-index: 1;
+    left: -100%;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+  }
+  #slide-menu.open {
+    left: 0;
+  }
+  #heading {
+    left: 20%;
+    right: 20%;
+  }
   .links-wrapper .links .link {
     display: block;
     margin: 0 auto;
