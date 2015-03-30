@@ -41,34 +41,4 @@
     margin: 0 auto;
     width: 100%;
   }
-  .links-wrapper .links .link.email {
-    background-color: #c92c19;
-  }
-  .links-wrapper .links .link.email:before {
-    background-color: #c92c19;
-  }
-  .links-wrapper .links .link.github {
-    background-color: #bf4064;
-  }
-  .links-wrapper .links .link.github:before {
-    background-color: #bf4064;
-  }
-  .links-wrapper .links .link.codepen {
-    background-color: #dfd20d;
-  }
-  .links-wrapper .links .link.codepen:before {
-    background-color: #dfd20d;
-  }
-  .links-wrapper .links .link.linkedin {
-    background-color: #0077b5;
-  }
-  .links-wrapper .links .link.linkedin:before {
-    background-color: #0077b5;
-  }
-  .links-wrapper .links .link.twitter {
-    background-color: #55acee;
-  }
-  .links-wrapper .links .link.twitter:before {
-    background-color: #55acee;
-  }
 }
