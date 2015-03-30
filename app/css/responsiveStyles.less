@@ -23,16 +23,44 @@
         margin: 0 auto;
         width: 100%;
 
-        &.one {
-          background-color: @blue;
+        &.email {
+          background-color: @gmailRed;
+
+          &:before {
+            background-color: @gmailRed;
+          }
         }
 
-        &.two {
-          background-color: @green;
-        }
-
-        &.three {
+        &.github {
           background-color: @red;
+
+          &:before {
+            background-color: @red;
+          }
+        }
+
+        &.codepen {
+          background-color: @yellow;
+
+          &:before {
+            background-color: @yellow;
+          }
+        }
+
+        &.linkedin {
+          background-color: @linkedinBlue;
+
+          &:before {
+            background-color: @linkedinBlue;
+          }
+        }
+
+        &.twitter {
+          background-color: @twitterBlue;
+
+          &:before {
+            background-color: @twitterBlue;
+          }
         }
       }
     }

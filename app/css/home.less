@@ -216,7 +216,22 @@ body {
         .transition-duration(1s);
       }
 
-      &.one {
+      &.email {
+        &:before {
+          background: url(/app/css/images/mail_icon.png);
+          background-repeat: no-repeat;
+          background-color: #fff;
+          background-position: 50%;
+        }
+
+        &:hover {
+          &:before {
+            background-color: @gmailRed;
+          }
+        }
+      }
+
+      &.github {
         &:before {
           background: url(/app/css/images/GitHub-Mark-120px-plus.png);
           background-repeat: no-repeat;
@@ -226,12 +241,12 @@ body {
 
         &:hover {
           &:before {
-            background-color: rgb(109, 111, 255);
+            background-color: @red;
           }
         }
       }
 
-      &.two {
+      &.codepen {
         &:before {
           background: url(/app/css/images/codepen-logo.png);
           background-repeat: no-repeat;
@@ -242,14 +257,14 @@ body {
 
         &:hover {
           &:before {
-            background-color: #3DB864;
+            background-color: @yellow;
           }
         }
       }
 
-      &.three {
+      &.linkedin {
         &:before {
-          //background: url(/app/css/images/codepen-logo.png);
+          background: url(/app/css/images/linkedin_icon.png);
           background-repeat: no-repeat;
           background-color: #fff;
           background-position: 50%;
@@ -258,7 +273,23 @@ body {
 
         &:hover {
           &:before {
-            background-color: @red;
+            background-color: @linkedinBlue;
+          }
+        }
+      }
+
+      &.twitter {
+        &:before {
+          background: url(/app/css/images/twitter_icon.png);
+          background-repeat: no-repeat;
+          background-color: #fff;
+          background-position: 50%;
+          background-size: 70%;
+        }
+
+        &:hover {
+          &:before {
+            background-color: @twitterBlue;
           }
         }
       }
