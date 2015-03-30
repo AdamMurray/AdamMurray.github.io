@@ -4,18 +4,9 @@
 @import 'fonts.less';
 @import 'library.less';
 
-// variables
-@starDimension: 2px;
-
-// colours
-@gold: rgba(194, 177, 71, 1);
-@gold80PercentOpaque: rgba(194, 177, 71, 0.8);
-@orange: #C8663C;
-@red: #BF4064;
-
 body {
   font-family: 'quicksand';
-  background: #000;
+  background: @indigo;
 
   a {
     text-decoration: none;
@@ -40,7 +31,7 @@ body {
   position: absolute;
   top: 10%;
   left: 50%;
-  border-radius: 50%;
+  //border-radius: 50%;
   transform: translate(-50%, 0%);
 
   .star {
@@ -195,7 +186,7 @@ body {
   position: absolute;
   top: 70%;
   left: 0;
-  background: #090B18;
+  background: @indigo;
 
   .links {
     position: absolute;

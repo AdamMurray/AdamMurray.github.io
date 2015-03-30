@@ -11,5 +11,15 @@
   .links-wrapper .links .link {
     display: block;
     margin: 0 auto;
+    width: 100%;
+  }
+  .links-wrapper .links .link.one {
+    background-color: #6d6fff;
+  }
+  .links-wrapper .links .link.two {
+    background-color: #3db864;
+  }
+  .links-wrapper .links .link.three {
+    background-color: #bf4064;
   }
 }

@@ -1,5 +1,7 @@
 // out: responsiveStyles.css, compres: true
 
+@import 'library.less';
+
 @media all and (min-width: 1000px) {
   .links-wrapper {
 
@@ -19,6 +21,19 @@
       .link {
         display: block;
         margin: 0 auto;
+        width: 100%;
+
+        &.one {
+          background-color: @blue;
+        }
+
+        &.two {
+          background-color: @green;
+        }
+
+        &.three {
+          background-color: @red;
+        }
       }
     }
   }
