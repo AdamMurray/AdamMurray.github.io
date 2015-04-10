@@ -9,10 +9,15 @@ body {
   font-family: 'quicksand';
   background: @white;
   color: @indigo;
+  background: url(/app/css/images/geo_background_1.jpg);
 
   a {
     text-decoration: none;
   }
+}
+
+* {
+  .box-sizing;
 }
 
 #top-menu {
@@ -39,7 +44,7 @@ body {
     }
   }
 
-  #logo {
+  #logo-border {
     position: relative;
     top: 10px;
     height: 60px;
@@ -49,11 +54,23 @@ body {
     width: 100px;
     height: 100px;
     .transition-duration;
+  }
+
+  #logo {
+    position: relative;
+    top: 10px;
+    height: 60px;
+    width: 60px;
+    margin: 0 auto;
+    top: 42%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    .transition-duration;
 
     &.flat {
       .hair {
         box-shadow: none;
-        .animation-infinite;
       }
 
       .face {
@@ -67,6 +84,7 @@ body {
       height: 100%;
       background-color: #ff5500;
       border-radius: 50%;
+      .animation-infinite;
       box-shadow: inset 2px -5px 10px darken(#ff5500, 30%),
       inset 4px 4px 10px lighten(#ff5500, 20%);
     }

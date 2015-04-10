@@ -28,9 +28,9 @@
   animation: @type 2s;
 }
 
-.animation-infinite(@type: glow) {
-  -webkit-animation: @type 2s infinite;
-  animation: @type 2s infinite;
+.animation-infinite(@type: glow; @time: 2s) {
+  -webkit-animation: @type @time infinite;
+  animation: @type @time infinite;
 }
 
 .blur(@amount: 4px; @opacity: 70%) {
