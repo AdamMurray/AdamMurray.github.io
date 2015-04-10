@@ -11,6 +11,9 @@
   #heading {
     font-size: 3.7em;
   }
+  #sub-heading {
+    top: 55%;
+  }
 }
 @media all and (max-width: 420px) {
   body {
