@@ -6,12 +6,22 @@
   var starFieldWidth = window.innerWidth * 0.9;
   var starFieldHeight = window.innerHeight * 0.7;
 
-  positionStars(starFieldWidth, starFieldHeight);
-  animateStars(starFieldWidth, 1);
+  //positionStars(starFieldWidth, starFieldHeight);
+  //animateStars(starFieldWidth, 1);
 
   burgerButtonOnClick();
+  logoOnClick();
 
 })();
+
+function logoOnClick() {
+  var logo = document.getElementById('logo');
+  var topMenu = document.getElementById('top-menu');
+
+  logo.onclick = function() {
+    topMenu.className = 'entered';
+  };
+}
 
 function burgerButtonOnClick() {
   var burgerButton = document.getElementById('burger-button');

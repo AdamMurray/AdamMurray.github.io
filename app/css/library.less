@@ -23,6 +23,16 @@
 @indigo: #090B18;
 
 // mixins
+.animation(@type: glow) {
+  -webkit-animation: @type 2s;
+  animation: @type 2s;
+}
+
+.animation-infinite(@type: glow) {
+  -webkit-animation: @type 2s infinite;
+  animation: @type 2s infinite;
+}
+
 .blur(@amount: 4px; @opacity: 70%) {
   -webkit-filter: blur(@amount) opacity(@opacity);
   filter: blur(@amount) opacity(@opacity);
