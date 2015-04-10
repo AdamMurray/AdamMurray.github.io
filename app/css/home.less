@@ -5,6 +5,17 @@
 @import 'library.less';
 @import 'keyframes.less';
 
+// Scrollbar
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: @indigo;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: @white;
+  .border-radius;
+}
+
 body {
   font-family: 'quicksand';
   background: @white;
@@ -182,6 +193,15 @@ body {
   }
 }
 
+#filter {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 1));
+}
+
 #heading {
   font-family: 'quicksand';
   position: absolute;
@@ -193,6 +213,7 @@ body {
   font-size: 3em;
   text-align: center;
   padding: 10px;
+  text-shadow: 0 0 3px #ddd;
   .box-sizing;
   .translateY(-55%);
 }

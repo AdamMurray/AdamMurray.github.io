@@ -7,6 +7,11 @@
     margin: 0 auto;
   }
 }
+@media all and (min-width: 600px) {
+  #heading {
+    font-size: 3.7em;
+  }
+}
 @media all and (max-width: 420px) {
   body {
     background: url(/app/css/images/geo_background_1_MOBILE.jpg);
@@ -40,8 +45,8 @@
   }
   #heading {
     top: 50%;
-    left: 20%;
-    right: 20%;
+    left: 16%;
+    right: 16%;
   }
   .links-wrapper {
     top: 100%;
