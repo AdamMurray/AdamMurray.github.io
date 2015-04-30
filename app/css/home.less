@@ -20,8 +20,10 @@ body {
   font-family: 'quicksand';
   background: @white;
   color: @indigo;
-  background: url(/app/css/images/geo_background_1.jpg);
-  background-size: 100%;
+  background: url(/app/css/images/workstation.jpg);
+  background-size: 120%;
+  background-position: 50% 0;
+  .clearfix;
 
   a {
     text-decoration: none;
@@ -203,7 +205,7 @@ body {
   position: absolute;
   top: 80px;
   left: 0;
-  background: linear-gradient(transparent, rgba(255, 255, 255, 1));
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #heading {
@@ -212,13 +214,14 @@ body {
   position: absolute;
   left: 30%;
   right: 30%;
-  top: 42%;
+  top: 30%;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   font-size: 40px;
   line-height: 140%;
   text-align: center;
   padding: 10px;
+  color: #fff;
   .box-sizing;
   .translateY(-55%);
 }
@@ -228,19 +231,21 @@ body {
   position: absolute;
   left: 10%;
   right: 10%;
-  top: 70%;
+  top: 44%;
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   font-size: 20px;
   text-align: center;
   padding: 10px;
+  color: #fff;
   // text-shadow: 0 2px 2px rgba(0,0,0,0.5);
   .box-sizing;
   .translateY(-55%);
 
   .dev {
     font-family: monospace;
-    color: #090B18;
+    // color: #090B18;
+    color: #69CD53;
     font-weight: bold;
   }
 
@@ -345,6 +350,7 @@ body {
   left: 0;
   box-shadow: 0 -2px 4px 1px rgba(0,0,0,0.4);
   background: @indigo;
+  .clearfix;
 
   .links {
     position: absolute;
@@ -352,6 +358,7 @@ body {
     left: 0;
     width: 100%;
     height: 280px;
+    .clearfix;
 
     .link {
       width: 50%;
