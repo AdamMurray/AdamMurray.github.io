@@ -7,14 +7,17 @@
     margin: 0 auto;
   }
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 420px) and (max-width: 992px) {
+  body {
+    background-size: 250%;
+  }
   #heading {
     font-size: 3.7em;
   }
 }
 @media all and (max-width: 420px) {
   body {
-    background-size: 250%;
+    background: url(/app/css/images/workstation_amber_MEDIUM.jpg);
   }
   #top-menu #burger-button {
     display: none;
@@ -44,12 +47,11 @@
     left: 0;
   }
   #heading {
-    top: 40%;
-    left: 16%;
-    right: 16%;
+    left: 10%;
+    width: 80%;
   }
   #sub-heading {
-    top: 55%;
+    top: 54%;
   }
   .links-wrapper {
     top: 550px;
