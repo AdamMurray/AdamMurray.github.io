@@ -1,4 +1,5 @@
-(function () {
+
+document.addEventListener('DOMContentLoaded', function() {
 
   // TODO: add json with entries for various speeds, e.g.:
   // slow, normal, fast, warp, and set numbers that correspond to them.
@@ -12,7 +13,18 @@
   burgerButtonOnClick();
   logoOnClick();
 
-})();
+  resizeFilter();
+  resizeLinksWrapperTop();
+
+});
+
+function resizeFilter() {
+  $('#filter').css('height', $(window).height());
+}
+
+function resizeLinksWrapperTop() {
+  $('.links-wrapper').css('top', $(window).height());
+}
 
 function logoOnClick() {
   var logo = document.getElementById('logo');
