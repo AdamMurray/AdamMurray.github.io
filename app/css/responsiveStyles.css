@@ -11,9 +11,6 @@
   body {
     background-size: 250%;
   }
-  #heading {
-    font-size: 3.7em;
-  }
 }
 @media all and (max-width: 420px) {
   body {
@@ -46,12 +43,8 @@
   #slide-menu.open {
     left: 0;
   }
-  #heading {
-    left: 10%;
-    width: 80%;
-  }
-  #sub-heading {
-    top: 54%;
+  .heading-wrapper {
+    top: 25%;
   }
   .links-wrapper {
     top: 550px;
