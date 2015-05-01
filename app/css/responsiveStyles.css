@@ -11,6 +11,9 @@
   body {
     background-size: 250%;
   }
+  .panel-wrapper .panel.dev .code {
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 420px) {
   body {
@@ -48,6 +51,9 @@
   }
   .heading-wrapper #heading {
     font-size: 40px;
+  }
+  .panel-wrapper {
+    display: none;
   }
   .links-wrapper {
     top: 550px;

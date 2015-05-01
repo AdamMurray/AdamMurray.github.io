@@ -142,65 +142,6 @@ body {
   }
 }
 
-#star-field {
-  width: 100%;
-  margin: 0 auto;
-  height: 60%;
-  background: #000;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 32, 255, 0.15);
-    width: 100%;
-    height: 100%;
-  }
-
-  .star {
-    width: @starDimension;
-    height: @starDimension;
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-
-    &.far {
-      width: @starDimension - 1;
-      height: @starDimension - 1;
-    }
-
-    &.near {
-      width: @starDimension + 2;
-      height: @starDimension + 2;
-    }
-
-    &.white {
-      background: #fff;
-      box-shadow: 0 0 15px #fff;
-    }
-
-    &.yellow {
-      background: #BFBB40;
-      box-shadow: 0 0 15px #BFBB40;
-    }
-
-    &.blue {
-      background: #4444ff;
-      box-shadow: 0 0 15px #4444ff;
-    }
-
-    &.red {
-      background: #ff4444;
-      box-shadow: 0 0 15px #ff4444;
-    }
-  }
-}
-
 #filter {
   height: 100%;
   width: 100%;
@@ -245,7 +186,7 @@ body {
 
     .dev {
       font-family: monospace;
-      color: #69CD53;
+      color: #05B8B7;
     }
 
     .designer {
@@ -254,90 +195,65 @@ body {
   }
 }
 
-#outer-triangle {
-  @borderSideWidth: 140px;
-  @borderTopHeight: @borderSideWidth * 2 * 0.866;
+.panel-wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  z-index: -1;
 
-  display: block;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-top: @borderTopHeight solid @gold80PercentOpaque;
-  border-left: @borderSideWidth solid transparent;
-  border-right: @borderSideWidth solid transparent;
+  .panel {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    float: left;
+    padding: 20px;
 
-  &:after {
-    content: "";
-    position: absolute;
+    &.dev {
+      background: rgba(0,0,0,0.5);
+      color: #fff;
 
-  }
+      .code {
+        line-height: 130%;
+        font-size: 20px;
+        text-shadow: 0 0 5px #fff;
+        .transition-duration;
+        -webkit-transform: translate(8%, 7%);
+        transform: translate(8%, 7%);
 
-  &.pulse {
+        .tabbed {
+          &.once {
+            margin-left: 20px;
+          }
 
-  }
+          &.twice {
+            margin-left: 40px;
+          }
 
-  &:hover,
-  &.clicked {
-    .inner-triangle {
-      opacity: 1;
+          &.thrice {
+            margin-left: 60px;
+          }
+        }
 
-      &.top {
-        transform: rotateX(0deg);
-      }
+        .class {
+          color: #66C0FF;
+          text-shadow: 0 0 5px #66C0FF;
+        }
 
-      &.left,
-      &.right {
-        transform: rotateY(0deg);
-      }
-    }
-  }
+        .keyword {
+          color: #FFC100;
+          text-shadow: 0 0 5px #FFC100;
+        }
 
-  .inner-triangle {
-    opacity: 0;
-    .transition-duration(1s);
-    position: absolute;
-    border-bottom: @borderTopHeight solid darken(@gold80PercentOpaque, 20%);
-    border-left: @borderSideWidth solid transparent;
-    border-right: @borderSideWidth solid transparent;
-
-    &.top {
-      top: -2 * @borderTopHeight;
-      left: -1 * @borderSideWidth;
-      transform-origin: bottom;
-      transform: rotateX(180deg);
-
-      &:hover {
-        border-bottom: @borderTopHeight solid rgba(211, 27, 27, 0.8);
-      }
-
-      img {
-        position: absolute;
-        left: -60px;
-        top: 100px;
+        .value {
+          color: #0FFFED;
+          text-shadow: 0 0 5px #0FFFED;
+        }
       }
     }
 
-    &.left {
-      top: -1 * @borderTopHeight;
-      left: -2 * @borderSideWidth;
-      transform-origin: bottom right;
-      transform: rotateY(-90deg);
-
-      &:hover {
-        border-bottom: @borderTopHeight solid rgba(35, 178, 35, 0.8);
-      }
-    }
-
-    &.right {
-      top: -1 * @borderTopHeight;
-      transform-origin: bottom left;
-      transform: rotateY(90deg);
-
-      &:hover {
-        border-bottom: @borderTopHeight solid rgba(58, 48, 211, 0.8);
-      }
+    &.designer {
+      background: rgba(255, 85, 0, 0.51);
     }
   }
 }
