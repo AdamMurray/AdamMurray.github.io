@@ -209,7 +209,7 @@ table {
   border-radius: 10px;
 }
 body {
-  font-family: 'quicksand';
+  font-family: 'quicksand', 'Segoe UI', 'Verdana', 'Tahoma', sans-serif;
   color: #090b18;
   background: url(/app/css/images/workstation_amber.jpg);
   background-repeat: no-repeat;

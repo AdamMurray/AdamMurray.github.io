@@ -48,4 +48,4 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['jade', 'build-js-dev', 'less', 'watch']);
+gulp.task('default', ['jade', 'build-js-dev', 'build-js-production', 'less', 'watch']);
