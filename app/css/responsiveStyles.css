@@ -18,6 +18,7 @@
 @media all and (max-width: 420px) {
   body {
     background: url(/app/css/images/workstation_amber_MEDIUM.jpg);
+    background-color: #c8663c;
   }
   #top-menu #burger-button {
     display: none;

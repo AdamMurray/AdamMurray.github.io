@@ -1,15 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  // TODO: add json with entries for various speeds, e.g.:
-  // slow, normal, fast, warp, and set numbers that correspond to them.
-  // This should clean up the code a bit
-  var starFieldWidth = window.innerWidth * 0.9;
-  var starFieldHeight = window.innerHeight * 0.7;
-
-  //positionStars(starFieldWidth, starFieldHeight);
-  //animateStars(starFieldWidth, 1);
-
   burgerButtonOnClick();
   logoOnClick();
 
