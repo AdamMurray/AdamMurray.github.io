@@ -7,9 +7,7 @@ html
     
     link(rel="shortcut icon", href="/app/css/images/logo.PNG" type="image/icon")
     
-    link(rel="stylesheet", type="text/css", href="/app/css/reset.css")
-    link(rel="stylesheet", type="text/css", href="/app/css/home.css")
-    link(rel="stylesheet", type="text/css", href="/app/css/responsiveStyles.css")    
+    link(rel="stylesheet", type="text/css", href="styles.css")   
   
   body
     #top-menu
@@ -48,5 +46,6 @@ html
         a(href="https://twitter.com/RougeEtrange", target="_blank")
           .link.twitter
 
-    script(type="text/javascript", src="/app/js/lib/jquery/jquery-1.11.2.min.js")
-    script(type="text/javascript", src="/app/js/home.js")
+    //- Add async and defer attributes to script tags (and test load time)
+    script(type="text/javascript", src="app.js") // dev JS
+    //- script(type="text/javascript", src="app.min.js") // production JS
