@@ -283,6 +283,10 @@ body {
       float: left;
       .transition-duration;
 
+      &:hover {
+        // border-radius: 80px;
+      }
+
       &:before {
         content: "";
         position: absolute;
@@ -309,7 +313,7 @@ body {
 
         &:hover {
           &:before {
-            background-color: @gmailRed;
+            background-color: lighten(@gmailRed, 10%);
             background-size: 78%;
           }
         }
@@ -328,7 +332,7 @@ body {
 
         &:hover {
           &:before {
-            background-color: @red;
+            background-color: lighten(@red, 10%);
             background-size: 68%;
           }
         }
@@ -347,7 +351,7 @@ body {
 
         &:hover {
           &:before {
-            background-color: @yellow;
+            background-color: lighten(@yellow, 10%);
             background-size: 78%;
           }
         }
@@ -366,7 +370,7 @@ body {
 
         &:hover {
           &:before {
-            background-color: @linkedinBlue;
+            background-color: lighten(@linkedinBlue, 10%);
             background-size: 78%;
           }
         }
@@ -386,7 +390,7 @@ body {
 
         &:hover {
           &:before {
-            background-color: @twitterBlue;
+            background-color: lighten(@twitterBlue, 10%);
             background-size: 78%;
           }
         }

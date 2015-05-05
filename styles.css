@@ -510,7 +510,7 @@ body a {
   background-size: 70%;
 }
 .links-wrapper .links .link.email:hover:before {
-  background-color: #c92c19;
+  background-color: #e54330;
   background-size: 78%;
 }
 .links-wrapper .links .link.github {
@@ -524,7 +524,7 @@ body a {
   background-size: 60%;
 }
 .links-wrapper .links .link.github:hover:before {
-  background-color: #bf4064;
+  background-color: #cc6683;
   background-size: 68%;
 }
 .links-wrapper .links .link.codepen {
@@ -538,7 +538,7 @@ body a {
   background-size: 70%;
 }
 .links-wrapper .links .link.codepen:hover:before {
-  background-color: #dfd20d;
+  background-color: #f2e62d;
   background-size: 78%;
 }
 .links-wrapper .links .link.linkedin {
@@ -552,7 +552,7 @@ body a {
   background-size: 70%;
 }
 .links-wrapper .links .link.linkedin:hover:before {
-  background-color: #0077b5;
+  background-color: #0099e8;
   background-size: 78%;
 }
 .links-wrapper .links .link.twitter {
@@ -567,7 +567,7 @@ body a {
   background-color: #55acee;
 }
 .links-wrapper .links .link.twitter:hover:before {
-  background-color: #55acee;
+  background-color: #83c3f3;
   background-size: 78%;
 }
 
