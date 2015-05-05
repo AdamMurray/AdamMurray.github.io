@@ -1,9 +1,17 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    less = require('gulp-less');
+    less = require('gulp-less'),
+    jade = require('gulp-jade');
 
 var src = 'app/';
+
+// Build Jade files
+gulp.task('jade', function() {
+  return gulp.src(src + 'views/*.jade')
+    .pipe(jade())
+    .pipe(gulp.dest(''));
+});
 
 // Concatenate and minify JS
 gulp.task('build-js-production', function() {
@@ -29,9 +37,15 @@ gulp.task('less', function() {
 
 // Watch for changes in files
 gulp.task('watch', function() {
+  // Watch .jade files
+  gulp.watch(src + 'views/*.jade', ['jade']);
+
   // Watch .js files
   gulp.watch(src + 'js/*.js', ['build-js']);
+
+  // Watch .less files
+  gulp.watch(src + 'css/*.less', ['less']);
 });
 
 // Default task
-gulp.task('default', ['build-js-dev', 'watch']);
+gulp.task('default', ['jade', 'build-js-dev', 'less', 'watch']);
