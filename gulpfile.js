@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     less = require('gulp-less'),
     jade = require('gulp-jade'),
-    inlineCss = require('gulp-inline-css'),
     rename = require('gulp-rename');
 
 var src = 'app/';
@@ -12,7 +11,6 @@ var src = 'app/';
 gulp.task('jade', function() {
   return gulp.src(src + 'views/home.jade')
     .pipe(jade())
-    .pipe(rename({ prefix: '_' }))
     .pipe(gulp.dest(''));
 });
 
@@ -38,20 +36,20 @@ gulp.task('less', function() {
     .pipe(gulp.dest(''));
 });
 
-// Inline CSS in HTML files
-gulp.task('inline-css', function() {
-  return gulp.src('_*.html')
-    .pipe(inlineCss())
-    .pipe(rename({
-      prefix: 'inline'
-    }))
-    .pipe(gulp.dest(''));
-});
+// // Inline CSS in HTML files
+// gulp.task('inline-css', function() {
+//   return gulp.src('_*.html')
+//     .pipe(inlineCss())
+//     .pipe(rename({
+//       prefix: 'inline'
+//     }))
+//     .pipe(gulp.dest(''));
+// });
 
 // Watch for changes in files
 gulp.task('watch', function() {
   // Watch .jade files
-  gulp.watch(src + 'views/*.jade', ['jade', 'inline-css']);
+  gulp.watch(src + 'views/*.jade', ['jade']);
 
   // Watch .js files
   gulp.watch(src + 'js/*.js', ['build-js']);
@@ -61,4 +59,4 @@ gulp.task('watch', function() {
 });
 
 // Default task
-gulp.task('default', ['jade', 'inline-css', 'build-js-dev', 'build-js-production', 'less', 'watch']);
+gulp.task('default', ['jade', 'build-js-dev', 'build-js-production', 'less', 'watch']);
