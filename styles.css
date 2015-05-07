@@ -169,13 +169,13 @@ table {
 }
 @keyframes glow {
   0% {
-    box-shadow: 0 0 0 #f50;
+    box-shadow: 0 0 0 #fff;
   }
   50% {
-    box-shadow: 0 0 60px #f50;
+    box-shadow: 0 0 0px 20px #fff;
   }
   100% {
-    box-shadow: 0 0 0 #f50;
+    box-shadow: 0 0 0 #fff;
   }
 }
 @-webkit-keyframes expand {
@@ -288,6 +288,9 @@ body a {
   height: 100%;
   background-color: #ff5500;
   border-radius: 50%;
+  -o-animation: glow 2s infinite;
+  -ms-animation: glow 2s infinite;
+  -moz-animation: glow 2s infinite;
   -webkit-animation: glow 2s infinite;
   animation: glow 2s infinite;
   box-shadow: inset 2px -5px 10px #662200, inset 4px 4px 10px #ff9966;
@@ -354,7 +357,8 @@ body a {
 }
 .heading-wrapper #heading {
   position: relative;
-  font-family: 'SlimJoe';
+  font-family: 'SlimJoe', 'Tahoma', 'Segoe UI', sans-serif;
+  font-weight: 100;
   text-transform: uppercase;
   -ms-word-wrap: break-word;
   word-wrap: break-word;

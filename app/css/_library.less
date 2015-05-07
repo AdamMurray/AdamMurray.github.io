@@ -28,6 +28,9 @@
 }
 
 .animation-infinite(@type: glow; @time: 2s) {
+  -o-animation: @type @time infinite;
+  -ms-animation: @type @time infinite;
+  -moz-animation: @type @time infinite;
   -webkit-animation: @type @time infinite;
   animation: @type @time infinite;
 }
