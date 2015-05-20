@@ -12,42 +12,41 @@ html
   body
     //- TODO: remove .entered when finished working on sub menu
     #top-menu.entered
-      #burger-button
-        .bar.top
-        .bar.middle
-        .bar.bottom
       #logo.flat
         .hair
         .face
         .eyelid
         .eye
       .sub-menu
-        a(href="home.html", class="link left active") Links
-        a(href="showcase.html", class="link right") Showcase 
-    #slide-menu
+        a(href="#", class="link left active", id="links-link") Links
+        a(href="#", class="link right", id="showcase-link") Showcase
     
-    #filter
-      .heading-wrapper
-        #heading adam murray
-        #sub-heading <span class='dev'>developer</span> / <span class='designer'>designer</span>
-    
-    .panel-wrapper
-      .panel.dev
-        include ./includes/codeSnippet.jade
-      .panel.designer
-    
-    .links-wrapper
-      .links
-        a(href="mailto:adam.john.campbell.murray@gmail.com")
-          .link.email
-        a(href="https://github.com/AdamMurray", target="_blank")
-          .link.github
-        a(href="http://codepen.io/AdamMurray/", target="_blank")    
-          .link.codepen
-        a(href="https://www.linkedin.com/profile/view?id=177653568", target="_blank")
-          .link.linkedin
-        a(href="https://twitter.com/RougeEtrange", target="_blank")
-          .link.twitter
+    #links-page
+      #filter
+        .heading-wrapper
+          #heading adam murray
+          #sub-heading <span class='dev'>developer</span> / <span class='designer'>designer</span>
+      
+      .panel-wrapper
+        .panel.dev
+          include ./includes/codeSnippet.jade
+        .panel.designer
+      
+      .links-wrapper
+        .links
+          a(href="mailto:adam.john.campbell.murray@gmail.com")
+            .link.email
+          a(href="https://github.com/AdamMurray", target="_blank")
+            .link.github
+          a(href="http://codepen.io/AdamMurray/", target="_blank")    
+            .link.codepen
+          a(href="https://www.linkedin.com/profile/view?id=177653568", target="_blank")
+            .link.linkedin
+          a(href="https://twitter.com/RougeEtrange", target="_blank")
+            .link.twitter
+            
+    #showcase-page
+      #showcase
 
     //- Add async and defer attributes to script tags (and test load time)
     script(type="text/javascript", src="app.js", defer) // dev JS

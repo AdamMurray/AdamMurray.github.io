@@ -24,7 +24,7 @@ gulp.task('build-js-production', function() {
 
 gulp.task('build-js-dev', function() {
   return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js', src + 'js/showcase.js'])
-    // .pipe(concat('app.js'))
+    .pipe(concat('app.js'))
     .pipe(gulp.dest(''));
 });
 
@@ -52,7 +52,7 @@ gulp.task('watch', function() {
   gulp.watch(src + 'views/*.jade', ['jade']);
 
   // Watch .js files
-  gulp.watch(src + 'js/*.js', ['build-js']);
+  gulp.watch(src + 'js/*.js', ['build-js-dev', 'build-js-production']);
 
   // Watch .less files
   gulp.watch(src + 'css/*.less', ['less']);

@@ -346,6 +346,14 @@ body a {
   top: 45%;
   right: 22%;
 }
+#links-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
 #filter {
   height: 100%;
   width: 100%;
@@ -585,18 +593,38 @@ body a {
   background-color: #83c3f3;
   background-size: 78%;
 }
-#showcase {
+#showcase-page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+#showcase-page.show {
+  opacity: 1;
+}
+#showcase-page #showcase {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 80px;
-  background: #ffffff;
+  top: 0;
+  background: #c2b147;
 }
 
 @media all and (min-width: 1000px) {
   #top-menu {
     width: 20%;
     height: 100%;
+  }
+  #top-menu.right {
+    left: auto;
+    right: 0;
   }
   #top-menu .sub-menu {
     position: relative;
