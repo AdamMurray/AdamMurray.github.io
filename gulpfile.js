@@ -9,22 +9,22 @@ var src = 'app/';
 
 // Build Jade files
 gulp.task('jade', function() {
-  return gulp.src(src + 'views/home.jade')
+  return gulp.src([src + 'views/home.jade', src +  'views/showcase.jade'])
     .pipe(jade())
     .pipe(gulp.dest(''));
 });
 
 // Concatenate and minify JS
 gulp.task('build-js-production', function() {
-  return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js'])
+  return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js', src + 'js/showcase.js'])
     .pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest(''));
 });
 
 gulp.task('build-js-dev', function() {
-  return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js'])
-    .pipe(concat('app.js'))
+  return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js', src + 'js/showcase.js'])
+    // .pipe(concat('app.js'))
     .pipe(gulp.dest(''));
 });
 

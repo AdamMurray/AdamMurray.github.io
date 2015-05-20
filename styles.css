@@ -133,18 +133,6 @@ table {
   font-style: normal;
 }
 @font-face {
-  font-family: 'goodfoot';
-  src: url(/app/css/fonts/Goodfoot/goodfoot.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'BigJohn';
-  src: url(/app/css/fonts/BigJohn.otf);
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
   font-family: 'BigJohn';
   src: url(/app/css/fonts/BigJohn.otf);
   font-weight: bold;
@@ -249,6 +237,28 @@ body a {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
+#top-menu .link {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  opacity: 0;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  position: absolute;
+  top: 30px;
+}
+#top-menu .link.left {
+  left: 20px;
+}
+#top-menu .link.right {
+  right: 20px;
+}
+#top-menu .link:hover,
+#top-menu .link.active {
+  color: #c8663c;
+}
 #top-menu.entered {
   height: 80px;
 }
@@ -261,8 +271,8 @@ body a {
   -webkit-animation: glow 2s !important;
   animation: glow 2s !important;
 }
-#top-menu.entered #click-me {
-  display: none;
+#top-menu.entered .link {
+  opacity: 1;
 }
 #top-menu #logo {
   position: relative;
@@ -325,21 +335,6 @@ body a {
   border-radius: 50%;
   top: 45%;
   right: 22%;
-}
-#top-menu #click-me {
-  font-family: 'goodfoot';
-  font-size: 3.4em;
-  position: relative;
-  top: 10px;
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  top: 50%;
-  color: #f50;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
 }
 #filter {
   height: 100%;
@@ -579,6 +574,13 @@ body a {
 .links-wrapper .links .link.twitter:hover:before {
   background-color: #83c3f3;
   background-size: 78%;
+}
+#showcase {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 80px;
+  background: #ffffff;
 }
 
 @media all and (min-width: 1000px) {

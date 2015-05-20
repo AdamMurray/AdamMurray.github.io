@@ -46,6 +46,29 @@ body {
   box-shadow: 0 2px 4px 1px rgba(0,0,0,0.4);
   .transition-duration;
 
+  .link {
+    color: @white;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    opacity: 0;
+    .transition-duration;
+    position: absolute;
+    top: 30px;
+
+    &.left {
+      left: 20px;
+    }
+
+    &.right {
+      right: 20px;
+    }
+
+    &:hover,
+    &.active {
+      color: @orange;
+    }
+  }
+
   &.entered {
     height: 80px;
 
@@ -59,8 +82,8 @@ body {
       }
     }
 
-    #click-me {
-      display: none;
+    .link {
+      opacity: 1;
     }
   }
 
@@ -125,19 +148,6 @@ body {
       top: 45%;
       right: 22%;
     }
-  }
-
-  #click-me {
-    font-family: 'goodfoot';
-    font-size: 3.4em;
-    position: relative;
-    top: 10px;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    top: 50%;
-    color: #f50;
-    .transition-duration;
   }
 }
 
@@ -398,4 +408,12 @@ body {
       }
     }
   }
+}
+
+#showcase {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 80px;
+  background: @white;
 }
