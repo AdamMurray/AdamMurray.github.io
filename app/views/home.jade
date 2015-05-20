@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Adam Murray
+    title Adam Murray | Links
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(name="theme-color", content="#000426")
     
@@ -10,7 +10,8 @@ html
     link(rel="stylesheet", type="text/css", href="styles.css")   
   
   body
-    #top-menu
+    //- TODO: remove .entered when finished working on sub menu
+    #top-menu.entered
       #burger-button
         .bar.top
         .bar.middle
@@ -20,8 +21,9 @@ html
         .face
         .eyelid
         .eye
-      a(href="home.html", class="link left active") Home
-      a(href="showcase.html", class="link right") Showcase 
+      .sub-menu
+        a(href="home.html", class="link left active") Links
+        a(href="showcase.html", class="link right") Showcase 
     #slide-menu
     
     #filter

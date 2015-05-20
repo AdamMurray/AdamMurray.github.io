@@ -2,8 +2,59 @@
 @import '_library';
 
 @media all and (min-width: 1000px) {
-  .links-wrapper {
+  #top-menu {
+    width: 20%;
+    height: 100%;
 
+    .sub-menu {
+      position: relative;
+      width: 100%;
+      background: red;
+      box-shadow: none;
+
+      .link {
+        color: @white;
+        background: transparent;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &.entered {
+      height: 100%;
+
+      #logo {
+        width: 80px;
+        height: 80px;
+        top: 60px;
+      }
+
+      .sub-menu {
+        position: relative;
+        width: 100%;
+        background: transparent;
+
+        .link {
+          color: @white;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  #filter,
+  .panel-wrapper{
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 80%;
+  }
+
+  .links-wrapper {
+    right: 0;
+    left: auto;
+    width: 80%;
+    
     .links {
       position: relative;
       top: 0;
