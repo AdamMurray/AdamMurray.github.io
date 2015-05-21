@@ -30,21 +30,11 @@ gulp.task('build-js-dev', function() {
 
 // Build LESS files
 gulp.task('less', function() {
-  return gulp.src([src + 'css/home.less', src + 'css/responsiveStyles.less'])
+  return gulp.src([src + 'css/styles.less', src + 'css/responsiveStyles.less'])
     .pipe(less())
     .pipe(concat('styles.css'))
     .pipe(gulp.dest(''));
 });
-
-// // Inline CSS in HTML files
-// gulp.task('inline-css', function() {
-//   return gulp.src('_*.html')
-//     .pipe(inlineCss())
-//     .pipe(rename({
-//       prefix: 'inline'
-//     }))
-//     .pipe(gulp.dest(''));
-// });
 
 // Watch for changes in files
 gulp.task('watch', function() {

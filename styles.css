@@ -353,6 +353,10 @@ body a {
   top: 0;
   left: 0;
   display: block;
+  opacity: 1;
+}
+#links-page.hide {
+  opacity: 0;
 }
 #filter {
   height: 100%;
@@ -594,7 +598,7 @@ body a {
   background-size: 78%;
 }
 #showcase-page {
-  width: 100%;
+  width: 80%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -614,7 +618,37 @@ body a {
   height: 100%;
   width: 100%;
   top: 0;
-  background: #c2b147;
+  background: #ffffff;
+}
+#showcase-page #showcase .project {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#showcase-page #showcase .project .title {
+  font-size: 1.5em;
+}
+#showcase-page #showcase .project .description {
+  font-family: 'Segoe UI', 'Tahoma', sans-serif;
+  padding: 10px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#showcase-page #showcase .project .website {
+  position: relative;
+  height: 568px;
+  width: 320px;
+}
+#showcase-page #showcase .project .website iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 @media all and (min-width: 1000px) {
@@ -623,8 +657,7 @@ body a {
     height: 100%;
   }
   #top-menu.right {
-    left: auto;
-    right: 0;
+    left: 80%;
   }
   #top-menu .sub-menu {
     position: relative;
@@ -670,7 +703,6 @@ body a {
   .links-wrapper .links {
     position: relative;
     top: 0;
-    width: 70%;
     height: 280px;
     margin: 0 auto;
   }

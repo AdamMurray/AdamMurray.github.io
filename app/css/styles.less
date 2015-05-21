@@ -178,6 +178,11 @@ body {
   top: 0;
   left: 0;
   display: block;
+  opacity: 1;
+
+  &.hide {
+    opacity: 0;
+  }
 }
 
 #filter {
@@ -440,7 +445,7 @@ body {
 }
 
 #showcase-page {
-  width: 100%;
+  width: 80%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -458,6 +463,37 @@ body {
     height: 100%;
     width: 100%;
     top: 0;
-    background: @gold;
+    background: @white;
+
+    .project {
+      position: relative;
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      .box-sizing;
+      padding: 20px;
+
+      .title {
+        font-size: 1.5em;
+      }
+
+      .description {
+        font-family: 'Segoe UI','Tahoma',sans-serif;
+        padding: 10px 0;
+        .box-sizing;
+      }
+
+      .website {
+        position: relative;
+        height: 568px; // iPhone 5 height
+        width: 320px; // iPhone 5 width
+
+        iframe {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
   }
 }
