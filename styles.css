@@ -267,7 +267,7 @@ body a {
 #top-menu .sub-menu .link {
   color: #111;
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 1em;
   opacity: 0;
   width: 50%;
   display: inline-block;
@@ -588,10 +588,10 @@ body a {
   background-size: 78%;
 }
 #showcase-page {
-  width: 80%;
+  width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 110px;
   left: 0;
   display: block;
   opacity: 0;
@@ -622,11 +622,13 @@ body a {
   padding: 20px;
 }
 #showcase-page #showcase .project .title {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 #showcase-page #showcase .project .description {
   font-family: 'Segoe UI', 'Tahoma', sans-serif;
-  padding: 10px 0;
+  padding: 20px 0;
+  line-height: 140%;
+  font-size: 17px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -634,7 +636,6 @@ body a {
 #showcase-page #showcase .project .website {
   position: relative;
   height: 568px;
-  width: 320px;
 }
 #showcase-page #showcase .project .website iframe {
   position: relative;
@@ -697,6 +698,13 @@ body a {
     top: 0;
     height: 280px;
     margin: 0 auto;
+  }
+  #showcase-page {
+    width: 80%;
+    top: 0;
+  }
+  #showcase-page #showcase .project {
+    padding: 40px;
   }
 }
 @media all and (min-width: 420px) and (max-width: 992px) {
