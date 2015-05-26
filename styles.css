@@ -232,10 +232,10 @@ body a {
   left: 0;
   background: #090b18;
   box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 #top-menu.entered {
   height: 80px;
@@ -464,7 +464,6 @@ body a {
 }
 .links-wrapper {
   width: 100%;
-  height: 100%;
   position: absolute;
   top: 70%;
   left: 0;
@@ -486,15 +485,6 @@ body a {
   left: 0;
   width: 100%;
   height: 280px;
-  zoom: 1;
-}
-.links-wrapper .links:before,
-.links-wrapper .links:after {
-  content: "";
-  display: table;
-}
-.links-wrapper .links:after {
-  clear: both;
 }
 .links-wrapper .links .link {
   width: 50%;
@@ -605,6 +595,7 @@ body a {
   left: 0;
   display: block;
   opacity: 0;
+  display: none;
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
@@ -612,10 +603,10 @@ body a {
 }
 #showcase-page.show {
   opacity: 1;
+  display: block;
 }
 #showcase-page #showcase {
   position: absolute;
-  height: 100%;
   width: 100%;
   top: 0;
   background: #ffffff;
@@ -649,6 +640,7 @@ body a {
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: #111111;
 }
 
 @media all and (min-width: 1000px) {
