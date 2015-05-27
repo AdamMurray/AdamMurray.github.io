@@ -178,11 +178,6 @@ body {
   top: 0;
   left: 0;
   display: block;
-  opacity: 1;
-
-  &.hide {
-    opacity: 0;
-  }
 }
 
 #filter {
@@ -202,7 +197,6 @@ body {
 
   #heading {
     position: relative;
-    // font-family: 'BigJohn';
     font-family: 'SlimJoe', 'Tahoma', 'Segoe UI', sans-serif;
     font-weight: 100;
     text-transform: uppercase;
@@ -443,15 +437,13 @@ body {
   height: 100%;
   position: absolute;
   top: 110px;
-  left: 0;
-  display: block;
-  opacity: 0;
-  display: none;
-  .transition-duration;
+  left: -100%;
+  // opacity: 0;
+  .transition-duration(.8s);
 
   &.show {
+    left: 0;
     opacity: 1;
-    display: block;
   }
 
   #showcase {

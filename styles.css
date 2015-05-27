@@ -353,10 +353,6 @@ body a {
   top: 0;
   left: 0;
   display: block;
-  opacity: 1;
-}
-#links-page.hide {
-  opacity: 0;
 }
 #filter {
   height: 100%;
@@ -592,18 +588,15 @@ body a {
   height: 100%;
   position: absolute;
   top: 110px;
-  left: 0;
-  display: block;
-  opacity: 0;
-  display: none;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  left: -100%;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
 }
 #showcase-page.show {
+  left: 0;
   opacity: 1;
-  display: block;
 }
 #showcase-page #showcase {
   position: absolute;
@@ -702,9 +695,12 @@ body a {
   #showcase-page {
     width: 80%;
     top: 0;
+    left: -80%;
   }
   #showcase-page #showcase .project {
     padding: 40px;
+    width: 50%;
+    float: left;
   }
 }
 @media all and (min-width: 420px) and (max-width: 992px) {

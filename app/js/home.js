@@ -47,7 +47,6 @@ function attachEvents() {
     $('#showcase-link').click(function() {
       $('#top-menu').addClass('right');
       $('#showcase-page').addClass('show');
-      $('#links-page').addClass('hide');
       $('#showcase-link').addClass('active');
       $('#links-link').removeClass('active');
     });
@@ -57,7 +56,6 @@ function attachEvents() {
     $('#links-link').click(function() {
       $('#top-menu').removeClass('right');
       $('#showcase-page').removeClass('show');
-      $('#links-page').removeClass('hide');
       $('#showcase-link').removeClass('active');
       $('#links-link').addClass('active');
     });
