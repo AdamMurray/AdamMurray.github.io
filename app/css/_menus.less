@@ -1,0 +1,68 @@
+
+// _menus.less
+
+.menu {
+
+  &.main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    background-color: @mainMenuColour;
+    box-shadow: 0 2px 4px 1px rgba(0,0,0,0.4);
+    .transition-duration(.8s);
+
+    &.entered {
+      height: 80px;
+
+      #logo {
+        top: 10px;
+        height: 60px;
+        width: 60px;
+
+        .hair {
+          .animation !important;
+        }
+      }
+
+      .sub-menu {
+        opacity: 1;
+
+        .link {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.sub-menu {
+  position: fixed;
+  top: 80px;
+  height: 30px;
+  width: 100%;
+  background: @white;
+  box-shadow: 0 2px 4px 1px rgba(0,0,0,0.4);
+  opacity: 0;
+
+  .link {
+    color: #111;
+    text-transform: uppercase;
+    font-size: 1em;
+    opacity: 0;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 3px solid @white;
+    .transition-duration;
+
+    &:hover,
+    &.active {
+      border-bottom: 3px solid @orange;
+      color: @orange;
+    }
+  }
+}

@@ -1,14 +1,20 @@
 
-// variables
+// _library.less
+
+// Variables
+// =============================================================================
 @cardBoxShadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 @fontSizeMobile: 20px;
 
-// stars
-@starDimension: 2px;
 
-// colours
+// Colours
+// =============================================================================
+
+// Standard colours
 @white: #fff;
 @black: #111;
+
+// Theme colours
 @gold: rgba(194, 177, 71, 1);
 @gold80PercentOpaque: rgba(194, 177, 71, 0.8);
 @gold2: #B29817;
@@ -22,7 +28,45 @@
 @blue: rgb(109, 111, 255);
 @indigo: #090B18;
 
-// mixins
+
+// Colour mappings
+// =============================================================================
+
+// logo
+@logoHairColour: #ff5500;
+@logoEyelidColour: #ccc;
+@logoEyeColour: #1177ff;
+
+// Menus
+@mainMenuColour: @indigo;
+
+// Backgrounds
+@mainBackgroundColour: @indigo;
+
+// Scrollbars
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: @indigo;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: @white;
+  .border-radius;
+}
+
+
+// Filters
+// =============================================================================
+.blur(@amount: 4px; @opacity: 70%) {
+  -webkit-filter: blur(@amount) opacity(@opacity);
+  filter: blur(@amount) opacity(@opacity);
+}
+
+
+// Utils
+// =============================================================================
+
+// Animations
 .animation(@type: glow) {
   -webkit-animation: @type 2s;
   animation: @type 2s;
@@ -36,11 +80,7 @@
   animation: @type @time infinite;
 }
 
-.blur(@amount: 4px; @opacity: 70%) {
-  -webkit-filter: blur(@amount) opacity(@opacity);
-  filter: blur(@amount) opacity(@opacity);
-}
-
+// Border properties
 .border-radius(@radius: 10px) {
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
@@ -53,6 +93,7 @@
   box-sizing: @type;
 }
 
+// Clearfix
 .clearfix() {
   zoom: 1;
 
@@ -67,22 +108,11 @@
   }
 }
 
+// Transforms
 .rotate(@degrees: 0deg) {
   -ms-transform: rotate(@degrees);
   -webkit-transform: rotate(@degrees);
   transform: rotate(@degrees);
-}
-
-.transition-delay(@time: .5s) {
-  -webkit-transition-delay: @time;
-  transition-delay: @time;
-}
-
-.transition-duration(@time: 0.4s) {
-  -moz-transition-duration: @time;
-  -o-transition-duration: @time;
-  -webkit-transition-duration: @time;
-  transition-duration: @time;
 }
 
 .translateY(@translation: -50%) {
@@ -99,4 +129,17 @@
   -o-transform: translate(@x, @y);
   -webkit-transform: translate(@x, @y);
   transform: translate(@x, @y);
+}
+
+// Transitions
+.transition-delay(@time: .5s) {
+  -webkit-transition-delay: @time;
+  transition-delay: @time;
+}
+
+.transition-duration(@time: 0.4s) {
+  -moz-transition-duration: @time;
+  -o-transition-duration: @time;
+  -webkit-transition-duration: @time;
+  transition-duration: @time;
 }
