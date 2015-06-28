@@ -1,13 +1,19 @@
+
+//- Home.jade
+
 doctype html
 html
   head
+    // Page info
     title Adam Murray | Links
+    
+    // Meta info
     meta(name="viewport", content="width=device-width, initial-scale=1")
     meta(name="theme-color", content="#000426")
     
+    // Stylesheets and favicon
     link(rel="shortcut icon", href="/app/css/images/logo.PNG" type="image/icon")
-    
-    link(rel="stylesheet", type="text/css", href="styles.css")   
+    link(rel="stylesheet", type="text/css", href="/Styles/styles.css")   
   
   body
     //- TODO: remove .entered when finished working on sub menu
@@ -78,5 +84,5 @@ html
           <p data-height="721" data-theme-id="0" data-slug-hash="bNxabv" data-default-tab="result" data-user="AdamMurray" class='codepen'>See the Pen <a href='http://codepen.io/AdamMurray/pen/bNxabv/'>Chemical Cabinet</a> by Adam Murray (<a href='http://codepen.io/AdamMurray'>@AdamMurray</a>) on <a href='http://codepen.io'>CodePen</a>.</p><script async src="//assets.codepen.io/assets/embed/ei.js"></script>
         
     //- Add async and defer attributes to script tags (and test load time)
-    script(type="text/javascript", src="app.js", defer) // dev JS
+    script(type="text/javascript", src="/Scripts/app.js", defer) // dev JS
     //- script(type="text/javascript", src="app.min.js", defer) // production JS

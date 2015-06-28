@@ -1,42 +1,62 @@
-var gulp = require('gulp'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    less = require('gulp-less'),
-    jade = require('gulp-jade'),
-    rename = require('gulp-rename');
 
+// gulpfile.js
+
+// Base setup
+// =============================================================================
+var gulp    = require('gulp'),
+    concat  = require('gulp-concat'),
+    uglify  = require('gulp-uglify'),
+    less    = require('gulp-less'),
+    jade    = require('gulp-jade'),
+    rename  = require('gulp-rename');
+
+// Folders
 var src = 'app/';
+
+// Build tasks
+// =============================================================================
 
 // Build Jade files
 gulp.task('jade', function() {
-  return gulp.src([src + 'views/home.jade', src +  'views/showcase.jade'])
+  return gulp.src([
+      src + 'views/home.jade'
+    ])
     .pipe(jade())
     .pipe(gulp.dest(''));
 });
 
 // Concatenate and minify JS
 gulp.task('build-js-production', function() {
-  return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js'])
+  return gulp.src([
+      src + 'js/lib/**/*.js',
+      src + 'js/home.js'
+    ])
     .pipe(uglify())
     .pipe(concat('app.min.js'))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest('Scripts/'));
 });
 
 gulp.task('build-js-dev', function() {
-  return gulp.src([src + 'js/lib/**/*.js', src + 'js/home.js'])
+  return gulp.src([
+      src + 'js/lib/**/*.js',
+      src + 'js/home.js'
+    ])
     .pipe(concat('app.js'))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest('Scripts/'));
 });
 
-// Build LESS files
+// Build .less files
 gulp.task('less', function() {
-  return gulp.src([src + 'css/styles.less', src + 'css/responsiveStyles.less'])
+  return gulp.src([
+      src + 'css/@ClientStyles.less'
+    ])
     .pipe(less())
     .pipe(concat('styles.css'))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest('Styles/'));
 });
 
-// Watch for changes in files
+// Set up watchers
+// =============================================================================
 gulp.task('watch', function() {
   // Watch .jade files
   gulp.watch(src + 'views/*.jade', ['jade']);
@@ -49,4 +69,5 @@ gulp.task('watch', function() {
 });
 
 // Default task
+// =============================================================================
 gulp.task('default', ['jade', 'build-js-dev', 'build-js-production', 'less', 'watch']);

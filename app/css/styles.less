@@ -3,19 +3,9 @@
 
 // Imports
 // =============================================================================
-
-// Reset
-@import '_reset';
-
-// Libraries
 @import '_fonts';
 @import '_library';
 @import '_keyframes';
-
-// Components
-@import '_logo';
-@import '_headings';
-@import '_menus';
 
 
 // Styles
@@ -56,6 +46,16 @@ body {
   top: 80px;
   left: 0;
   background: rgba(0, 0, 0, 0.4);
+
+  // Mobile styles
+  // =========================================================================
+  .aboveBreakpoint(@mediumScreen, {
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 80%;
+  }
+  );
 }
 
 .heading-wrapper {
@@ -126,6 +126,16 @@ body {
       background: rgba(255, 85, 0, 0.51);
     }
   }
+
+  // Mobile styles
+  // =========================================================================
+  .aboveBreakpoint(@mediumScreen, {
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 80%;
+  }
+  );
 }
 
 .links-wrapper {
@@ -262,6 +272,22 @@ body {
       }
     }
   }
+
+  // Mobile styles
+  // =========================================================================
+  .aboveBreakpoint(@mediumScreen, {
+    right: 0;
+    left: auto;
+    width: 80%;
+
+    .links {
+      position: relative;
+      top: 0;
+      height: 280px;
+      margin: 0 auto;
+    }
+  }
+  );
 }
 
 #showcase-page {
@@ -318,4 +344,21 @@ body {
       }
     }
   }
+
+  // Mobile styles
+  // =========================================================================
+  .aboveBreakpoint(@mediumScreen, {
+    width: 80%;
+    top: 0;
+    left: -80%;
+    
+    #showcase {
+      .project {
+        padding: 40px;
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+  );
 }

@@ -35,6 +35,53 @@
         }
       }
     }
+
+    // Mobile styles
+    // =========================================================================
+    .aboveBreakpoint(@mediumScreen, {
+      width: 20%;
+      height: 100%;
+
+      &.right {
+        left: 80%;
+      }
+
+      .sub-menu {
+        position: relative;
+        width: 100%;
+        background: red;
+        box-shadow: none;
+
+        .link {
+          color: @white;
+          background: transparent;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      &.entered {
+        height: 100%;
+
+        #logo {
+          width: 80px;
+          height: 80px;
+          top: 60px;
+        }
+
+        .sub-menu {
+          position: relative;
+          width: 100%;
+          background: transparent;
+
+          .link {
+            color: @white;
+            background: transparent;
+          }
+        }
+      }
+    }
+    );
   }
 }
 
