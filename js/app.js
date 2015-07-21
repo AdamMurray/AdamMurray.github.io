@@ -32,21 +32,10 @@ function preparePage() {
 * Event handling
 */
 function attachEvents() {
-  // Click handlers
-  logoOnClick();
 
   // Side menu links
   showShowcasePage();
   hideShowcasePage();
-
-  function logoOnClick() {
-    var logo = document.getElementById('logo');
-    var topMenu = document.getElementById('top-menu');
-
-    logo.onclick = function() {
-      topMenu.className = 'entered';
-    };
-  }
 
   function showShowcasePage() {
     $('#showcase-link').click(function() {

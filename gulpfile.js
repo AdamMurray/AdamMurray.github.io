@@ -33,7 +33,7 @@ gulp.task('build-js-production', function() {
     ])
     .pipe(uglify())
     .pipe(concat('app.min.js'))
-    .pipe(gulp.dest('Scripts/'));
+    .pipe(gulp.dest('js/'));
 });
 
 gulp.task('build-js-dev', function() {
@@ -42,7 +42,7 @@ gulp.task('build-js-dev', function() {
       src + 'js/home.js'
     ])
     .pipe(concat('app.js'))
-    .pipe(gulp.dest('Scripts/'));
+    .pipe(gulp.dest('js/'));
 });
 
 // Build .less files
@@ -52,7 +52,7 @@ gulp.task('less', function() {
     ])
     .pipe(less())
     .pipe(concat('styles.css'))
-    .pipe(gulp.dest('Styles/'));
+    .pipe(gulp.dest('css/'));
 });
 
 // Set up watchers
