@@ -1,6 +1,330 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=./home.html" />
-  </head>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--
+  The above 2 meta tags *must* come first in the <head>
+  to consistently ensure proper document rendering.
+  Any other head element should come *after* these tags.
+ -->
+  <title>adamworksin.tech</title>
+
+  <!-- Force IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="description" content="Adam John Campbell Murray is a web developer with over 4 years of professional experience.">
+  <meta name="author" content="Adam Murray">
+
+
+  <!-- //////////////////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="normalize.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P" rel="stylesheet">
+
+  <style>
+    @keyframes text-shadow-glow-white {
+      from {
+        text-shadow: 0px 0px 15px #ffffffab;
+      }
+      50% {
+        text-shadow: 0px 0px 35px #ffffffbe;
+      }
+      /* ignored */
+      to {
+        text-shadow: 0px 0px 15px #ffffffab;
+      }
+    }
+
+    ::-moz-selection {
+      /* Code for Firefox */
+      color: #eb12ff;
+      background: black;
+    }
+
+    ::selection {
+      color: #eb12ff;
+      background: black;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: linear-gradient(146deg, #eb12ff, #982ffa, rgb(0, 133, 255), #00dcff);
+      background-attachment: fixed;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    /** Copyright *************************************************************/
+
+    .copyright {
+      font-size: .5em;
+      color: #ffffffbd;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-weight: 200;
+      line-height: 1.4;
+    }
+
+    /** Header ****************************************************************/
+
+    .section--main {
+      height: 100%;
+      display: grid;
+    }
+
+    .header {
+      /* Layout */
+      align-self: center;
+      justify-self: center;
+    }
+
+    .header__title {
+      /* Layout */
+      align-self: center;
+      justify-self: center;
+
+      /* Design */
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      font-size: 2em;
+      padding: 20px;
+      text-shadow: 0px 0px 15px #ffffffab;
+      line-height: 1.4;
+      animation: text-shadow-glow-white 2s ease-in 0s infinite;
+    }
+
+    .header__subtitle {
+      /* Design */
+      font-size: .8em;
+      text-align: center;
+      color: #00d4ff;
+      text-shadow: 0px 0px 15px #0e82ff;
+    }
+
+    .header__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .header__links a {
+      font-size: .6em;
+      color: #00d4ff;
+    }
+
+    .header__buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .header__buttons button {
+      padding: 15px 12px;
+      text-transform: uppercase;
+      font-size: .7em;
+      color: white;
+      background: transparent;
+      border: 2px solid;
+      cursor: pointer;
+    }
+
+    .header__buttons button:hover {
+      border-color: #eb12ff;
+      color: #eb12ff;
+    }
+
+    /** CV ********************************************************************/
+
+    .cv {
+      height: 100%;
+    }
+
+    .cv__section {
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .cv__section--experience {
+      background: #151515;
+    }
+
+    .cv__section h3 {
+      color: white;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    .cv__subsection {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cv__experience {
+      margin-top: 20px;
+      color: white;
+      font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .cv__experience__year {
+      font-size: .9em;
+      color: #eb12ff;
+      margin-bottom: 10px;
+    }
+
+    .cv__experience__company {
+      margin-bottom: 5px;
+    }
+
+    .cv__experience__position {
+      font-size: .7em;
+      color: #828282;
+      margin-bottom: 10px;
+    }
+
+    .cv__experience__description {
+      font-size: .8em;
+      line-height: 1.4;
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Copyright -->
+  <section class="copyright">
+    <div>Adam John Campbell Murray</div>
+    <div>© Copyright 2018</div>
+  </section>
+
+  <!-- Header / Banner -->
+  <section class="section--main">
+
+    <div class="header">
+      <h1 class="header__title">
+        Adam Breathes Tech
+      </h1>
+
+      <h2 class="header__subtitle">
+        +++ web developer for hire +++
+      </h2>
+
+      <div class="header__links">
+        <div>
+          <a href="https://github.com/AdamMurray" target="_blank">
+            Github
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/adam-murray-9405b44b/" target="_blank">
+            LinkedIn
+          </a>
+        </div>
+        <div>
+          <a href="https://twitter.com/AdamJCMurray" target="_blank">
+            Twitter
+          </a>
+        </div>
+      </div>
+
+      <div class="header__buttons">
+        <button id="checkOutMyCv">
+          Check out my CV!
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="cv">
+
+    <!-- Experience -->
+    <div class="cv__section cv__section--experience">
+      <div class="cv__subsection">
+        <h3>Experience</h3>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2016 - 2018
+          </div>
+          <div class="cv__experience__company">
+            Synthace
+          </div>
+          <div class="cv__experience__position">
+            Front End Engineer
+          </div>
+          <div class="cv__experience__description">
+            // TODO
+          </div>
+        </div>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2015 - 2016
+          </div>
+          <div class="cv__experience__company">
+            IntelligentPOS
+          </div>
+          <div class="cv__experience__position">
+            Front End Technical Lead
+          </div>
+          <div class="cv__experience__description">
+            Led development of primary client-facing web application. Completely refac- tored and revamped existing codebase, using modern
+            AngularJS best prac- tices. Led the implementation of a number of advanced features including a product management
+            and stock system. Took charge of implementing mobile-responsiveness and progressive web app features in the application.
+            Application stack: AngularJS (1.4.x), Sass, Gulp, Bower, NPM.
+          </div>
+        </div>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2013 - 2015
+          </div>
+          <div class="cv__experience__company">
+            Geeks Ltd
+          </div>
+          <div class="cv__experience__position">
+            Junior software engineer
+          </div>
+          <div class="cv__experience__description">
+            Developed bespoke web applications for a range of clients, primarily using
+            Microsoft .NET technologies and an in-house code-generation tool called M#.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Skills -->
+
+    <!-- Education -->
+
+    <!-- Bio -->
+
+  </section>
+
+  <script>
+    (() => {
+
+      'use strict';
+
+      const checkOutMyCvButton = document.getElementById('checkOutMyCv');
+      const cvSection = document.getElementById('cv');
+      checkOutMyCv.addEventListener('click', () => {
+        cvSection.scrollIntoView({ behavior: 'smooth' });
+      });
+
+    })();
+  </script>
+
+</body>
+
 </html>
