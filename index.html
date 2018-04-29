@@ -51,6 +51,7 @@
     html,
     body {
       height: 100%;
+      font-size: 16px;
     }
 
     body {
@@ -102,10 +103,11 @@
 
     .header__subtitle {
       /* Design */
-      font-size: .8em;
+      font-size: .6em;
       text-align: center;
       color: #00d4ff;
       text-shadow: 0px 0px 15px #0e82ff;
+      text-transform: uppercase;
     }
 
     .header__links {
@@ -136,23 +138,28 @@
     }
 
     .header__buttons button:hover {
-      border-color: #eb12ff;
-      color: #eb12ff;
+      background: #eb12ff;
     }
 
     /** CV ********************************************************************/
 
     .cv {
-      height: 100%;
+      border-top: 1px solid white;
     }
 
     .cv__section {
       padding: 20px;
       margin: 0 auto;
+      background: #151515;
+      border-bottom: 1px solid white;
     }
 
     .cv__section--experience {
       background: #151515;
+    }
+
+    .cv__section--education .cv__experience__year {
+      color: #00dcff;
     }
 
     .cv__section h3 {
@@ -209,7 +216,7 @@
 
     <div class="header">
       <h1 class="header__title">
-        Adam Breathes Tech
+        Adam Murray
       </h1>
 
       <h2 class="header__subtitle">
@@ -246,6 +253,32 @@
   <!-- CV -->
   <section id="cv" class="cv">
 
+    <!-- Bio -->
+    <div class="cv__section cv__section--experience">
+      <div class="cv__subsection">
+        <h3>Bio</h3>
+
+        <div class="cv__experience">
+          <div class="cv__experience__description">
+            <p>
+              Graduated from the University of Glasgow in 2012 with a BSc in Physics, achieving second class honours (division I).
+            </p>
+            <p>
+              Have over 4 years of web development experience in a variety of industries, gaining experience with a large number of tools
+              and technologies.
+            </p>
+            <p>
+              Currently a front-end engineer at Synthace Ltd, based in London, UK. Working on the front-end of client-facing web applications
+              using Polymer.
+            </p>
+            <!-- <p>
+              Primarily interested in moving into the domain of music technology, with a web focus.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Experience -->
     <div class="cv__section cv__section--experience">
       <div class="cv__subsection">
@@ -256,13 +289,21 @@
             2016 - 2018
           </div>
           <div class="cv__experience__company">
-            Synthace
+            Synthace Ltd
           </div>
           <div class="cv__experience__position">
             Front End Engineer
           </div>
           <div class="cv__experience__description">
-            // TODO
+            <p>
+              Worked as part of a cross-disciplinary team of software engineers and life scientists towards the creation of a platform
+              to enhance the workflow of biology.
+            </p>
+            <p>
+              Primary responsibilities involved developing and maintaining a large and complex front-end code base, written using Polymer,
+              as part of a small front-end team.
+            </p>
+
           </div>
         </div>
 
@@ -277,10 +318,15 @@
             Front End Technical Lead
           </div>
           <div class="cv__experience__description">
-            Led development of primary client-facing web application. Completely refac- tored and revamped existing codebase, using modern
-            AngularJS best prac- tices. Led the implementation of a number of advanced features including a product management
-            and stock system. Took charge of implementing mobile-responsiveness and progressive web app features in the application.
-            Application stack: AngularJS (1.4.x), Sass, Gulp, Bower, NPM.
+            <p>
+              Led development of primary client-facing web application. Completely refactored and revamped existing codebase, using modern
+              AngularJS best practices. Led the implementation of a number of advanced features including a product management
+              and stock system. Took charge of implementing mobile-responsiveness and progressive web app features in the
+              application.
+            </p>
+            <p>
+              Application stack: AngularJS (1.4.x), Sass, Gulp, Bower, NPM.
+            </p>
           </div>
         </div>
 
@@ -295,8 +341,8 @@
             Junior software engineer
           </div>
           <div class="cv__experience__description">
-            Developed bespoke web applications for a range of clients, primarily using
-            Microsoft .NET technologies and an in-house code-generation tool called M#.
+            Developed bespoke web applications for a range of clients, primarily using Microsoft .NET technologies and an in-house code-generation
+            tool called M#.
           </div>
         </div>
 
@@ -304,10 +350,35 @@
     </div>
 
     <!-- Skills -->
+    <div class="cv__section cv__section--experience">
+      <div class="cv__subsection">
+        <h3>Skills</h3>
+      </div>
+    </div>
 
     <!-- Education -->
+    <div class="cv__section cv__section--education">
+      <div class="cv__subsection">
+        <h3>Education</h3>
 
-    <!-- Bio -->
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2008 - 2012
+          </div>
+          <div class="cv__experience__company">
+            University of Glasgow
+          </div>
+          <div class="cv__experience__position">
+            Bachelor in Science
+          </div>
+          <div class="cv__experience__description">
+            <p>
+              Physics (Second class honours, division i)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </section>
 
@@ -319,7 +390,7 @@
       const checkOutMyCvButton = document.getElementById('checkOutMyCv');
       const cvSection = document.getElementById('cv');
       checkOutMyCv.addEventListener('click', () => {
-        cvSection.scrollIntoView({ behavior: 'smooth' });
+        cvSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
 
     })();
