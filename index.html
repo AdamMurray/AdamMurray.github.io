@@ -9,7 +9,7 @@
   to consistently ensure proper document rendering.
   Any other head element should come *after* these tags.
  -->
-  <title>adamworksin.tech</title>
+  <title>adambreathes.tech</title>
 
   <!-- Force IE 8/9/10 to use its latest rendering engine -->
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -74,9 +74,18 @@
 
     /** Header ****************************************************************/
 
+    .section--particles {
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
     .section--main {
       height: 100%;
       display: grid;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.3);
     }
 
     .header {
@@ -96,9 +105,9 @@
       color: white;
       font-size: 2em;
       padding: 20px;
-      text-shadow: 0px 0px 15px #ffffffab;
+      /* text-shadow: 0px 0px 15px #ffffffab; */
       line-height: 1.4;
-      animation: text-shadow-glow-white 2s ease-in 0s infinite;
+      /* animation: text-shadow-glow-white 2s ease-in 0s infinite; */
     }
 
     .header__subtitle {
@@ -119,7 +128,7 @@
 
     .header__links a {
       font-size: .6em;
-      color: #00d4ff;
+      color: white;
     }
 
     .header__buttons {
@@ -211,6 +220,8 @@
     <div>© Copyright 2018</div>
   </section>
 
+  <section id="particles-js" class="section--particles"></section>
+
   <!-- Header / Banner -->
   <section class="section--main">
 
@@ -243,7 +254,7 @@
 
       <div class="header__buttons">
         <button id="checkOutMyCv">
-          Check out my CV!
+          ! Check out my CV !
         </button>
       </div>
     </div>
@@ -382,6 +393,7 @@
 
   </section>
 
+  <script src="particles.min.js"></script>
   <script>
     (() => {
 
@@ -391,6 +403,11 @@
       const cvSection = document.getElementById('cv');
       checkOutMyCv.addEventListener('click', () => {
         cvSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load('particles-js', 'particles.json', function () {
+        console.log('callback - particles.js config loaded');
       });
 
     })();
