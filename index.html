@@ -1,6 +1,418 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=./home.html" />
-  </head>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--
+  The above 2 meta tags *must* come first in the <head>
+  to consistently ensure proper document rendering.
+  Any other head element should come *after* these tags.
+ -->
+  <title>adambreathes.tech</title>
+
+  <!-- Force IE 8/9/10 to use its latest rendering engine -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta name="description" content="Adam John Campbell Murray is a web developer with over 4 years of professional experience.">
+  <meta name="author" content="Adam Murray">
+
+
+  <!-- //////////////////////////////////////////////////////////////////////-->
+  <link rel="stylesheet" href="normalize.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P" rel="stylesheet">
+
+  <style>
+    @keyframes text-shadow-glow-white {
+      from {
+        text-shadow: 0px 0px 15px #ffffffab;
+      }
+      50% {
+        text-shadow: 0px 0px 35px #ffffffbe;
+      }
+      /* ignored */
+      to {
+        text-shadow: 0px 0px 15px #ffffffab;
+      }
+    }
+
+    ::-moz-selection {
+      /* Code for Firefox */
+      color: #eb12ff;
+      background: black;
+    }
+
+    ::selection {
+      color: #eb12ff;
+      background: black;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-size: 16px;
+    }
+
+    body {
+      background: linear-gradient(146deg, #eb12ff, #982ffa, rgb(0, 133, 255), #00dcff);
+      background-attachment: fixed;
+      font-family: 'Press Start 2P', sans-serif;
+    }
+
+    /** Copyright *************************************************************/
+
+    .copyright {
+      font-size: .5em;
+      color: #ffffffbd;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-weight: 200;
+      line-height: 1.4;
+    }
+
+    /** Header ****************************************************************/
+
+    .section--particles {
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+
+    .section--main {
+      height: 100%;
+      display: grid;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      /* Layout */
+      align-self: center;
+      justify-self: center;
+    }
+
+    .header__title {
+      /* Layout */
+      align-self: center;
+      justify-self: center;
+
+      /* Design */
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      font-size: 2em;
+      padding: 20px;
+      /* text-shadow: 0px 0px 15px #ffffffab; */
+      line-height: 1.4;
+      /* animation: text-shadow-glow-white 2s ease-in 0s infinite; */
+    }
+
+    .header__subtitle {
+      /* Design */
+      font-size: .6em;
+      text-align: center;
+      color: #00d4ff;
+      text-shadow: 0px 0px 15px #0e82ff;
+      text-transform: uppercase;
+    }
+
+    .header__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .header__links a {
+      font-size: .6em;
+      color: white;
+    }
+
+    .header__buttons {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .header__buttons button {
+      padding: 15px 12px;
+      text-transform: uppercase;
+      font-size: .7em;
+      color: white;
+      background: transparent;
+      border: 2px solid;
+      cursor: pointer;
+    }
+
+    .header__buttons button:hover {
+      background: #eb12ff;
+    }
+
+    /** CV ********************************************************************/
+
+    .cv {
+      border-top: 1px solid white;
+    }
+
+    .cv__section {
+      padding: 20px;
+      margin: 0 auto;
+      background: #151515;
+      border-bottom: 1px solid white;
+    }
+
+    .cv__section--experience {
+      background: #151515;
+    }
+
+    .cv__section--education .cv__experience__year {
+      color: #00dcff;
+    }
+
+    .cv__section h3 {
+      color: white;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+
+    .cv__subsection {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cv__experience {
+      margin-top: 20px;
+      color: white;
+      font-family: 'Roboto Mono', sans-serif;
+    }
+
+    .cv__experience__year {
+      font-size: .9em;
+      color: #eb12ff;
+      margin-bottom: 10px;
+    }
+
+    .cv__experience__company {
+      margin-bottom: 5px;
+    }
+
+    .cv__experience__position {
+      font-size: .7em;
+      color: #828282;
+      margin-bottom: 10px;
+    }
+
+    .cv__experience__description {
+      font-size: .8em;
+      line-height: 1.4;
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Copyright -->
+  <section class="copyright">
+    <div>Adam John Campbell Murray</div>
+    <div>© Copyright 2018</div>
+  </section>
+
+  <section id="particles-js" class="section--particles"></section>
+
+  <!-- Header / Banner -->
+  <section class="section--main">
+
+    <div class="header">
+      <h1 class="header__title">
+        Adam Murray
+      </h1>
+
+      <h2 class="header__subtitle">
+        +++ web developer for hire +++
+      </h2>
+
+      <div class="header__links">
+        <div>
+          <a href="https://github.com/AdamMurray" target="_blank">
+            Github
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/adam-murray-9405b44b/" target="_blank">
+            LinkedIn
+          </a>
+        </div>
+        <div>
+          <a href="https://twitter.com/AdamJCMurray" target="_blank">
+            Twitter
+          </a>
+        </div>
+      </div>
+
+      <div class="header__buttons">
+        <button id="checkOutMyCv">
+          ! Check out my CV !
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="cv">
+
+    <!-- Bio -->
+    <div class="cv__section cv__section--experience">
+      <div class="cv__subsection">
+        <h3>Bio</h3>
+
+        <div class="cv__experience">
+          <div class="cv__experience__description">
+            <p>
+              Graduated from the University of Glasgow in 2012 with a BSc in Physics, achieving second class honours (division I).
+            </p>
+            <p>
+              Have over 4 years of web development experience in a variety of industries, gaining experience with a large number of tools
+              and technologies.
+            </p>
+            <p>
+              Currently a front-end engineer at Synthace Ltd, based in London, UK. Working on the front-end of client-facing web applications
+              using Polymer.
+            </p>
+            <!-- <p>
+              Primarily interested in moving into the domain of music technology, with a web focus.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="cv__section cv__section--experience">
+      <div class="cv__subsection">
+        <h3>Experience</h3>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2016 - 2018
+          </div>
+          <div class="cv__experience__company">
+            Synthace Ltd
+          </div>
+          <div class="cv__experience__position">
+            Front End Engineer
+          </div>
+          <div class="cv__experience__description">
+            <p>
+              Worked as part of a cross-disciplinary team of software engineers and life scientists towards the creation of a platform
+              to enhance the workflow of biology.
+            </p>
+            <p>
+              Primary responsibilities involved developing and maintaining a large and complex front-end code base, written using Polymer,
+              as part of a small front-end team.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2015 - 2016
+          </div>
+          <div class="cv__experience__company">
+            IntelligentPOS
+          </div>
+          <div class="cv__experience__position">
+            Front End Technical Lead
+          </div>
+          <div class="cv__experience__description">
+            <p>
+              Led development of primary client-facing web application. Completely refactored and revamped existing codebase, using modern
+              AngularJS best practices. Led the implementation of a number of advanced features including a product management
+              and stock system. Took charge of implementing mobile-responsiveness and progressive web app features in the
+              application.
+            </p>
+            <p>
+              Application stack: AngularJS (1.4.x), Sass, Gulp, Bower, NPM.
+            </p>
+          </div>
+        </div>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2013 - 2015
+          </div>
+          <div class="cv__experience__company">
+            Geeks Ltd
+          </div>
+          <div class="cv__experience__position">
+            Junior software engineer
+          </div>
+          <div class="cv__experience__description">
+            Developed bespoke web applications for a range of clients, primarily using Microsoft .NET technologies and an in-house code-generation
+            tool called M#.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="cv__section cv__section--experience">
+      <div class="cv__subsection">
+        <h3>Skills</h3>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="cv__section cv__section--education">
+      <div class="cv__subsection">
+        <h3>Education</h3>
+
+        <div class="cv__experience">
+          <div class="cv__experience__year">
+            2008 - 2012
+          </div>
+          <div class="cv__experience__company">
+            University of Glasgow
+          </div>
+          <div class="cv__experience__position">
+            Bachelor in Science
+          </div>
+          <div class="cv__experience__description">
+            <p>
+              Physics (Second class honours, division i)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="particles.min.js"></script>
+  <script>
+    (() => {
+
+      'use strict';
+
+      const checkOutMyCvButton = document.getElementById('checkOutMyCv');
+      const cvSection = document.getElementById('cv');
+      checkOutMyCv.addEventListener('click', () => {
+        cvSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load('particles-js', 'particles.json', () => {
+        console.log('callback - particles.js config loaded');
+      });
+
+    })();
+  </script>
+
+</body>
+
 </html>
