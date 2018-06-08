@@ -286,15 +286,18 @@
   <script src="particles.min.js"></script>
   <!-- <script src="jquery-3.3.1.min.js"></script> -->
   <script>
-    (() => {
+    (function () {
 
       'use strict';
 
+      var particlesJsonPathToUse = (window.innerWidth < 700)
+        ? 'particles.mobile.json'
+        : 'particles.json';
+
       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-      particlesJS.load('particles-js', 'particles.json', () => {
+      particlesJS.load('particles-js', particlesJsonPathToUse, () => {
         console.log('callback - particles.js config loaded');
       });
-
 
     })();
   </script>
