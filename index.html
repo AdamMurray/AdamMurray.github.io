@@ -290,12 +290,12 @@
 
       'use strict';
 
-      var particlesJsonPathToUse = (window.innerWidth < 700)
-        ? 'particles.mobile.json?1'
-        : 'particles.json';
+      // var particlesJsonPathToUse = (window.innerWidth < 700)
+      //   ? 'particles.mobile.json?1'
+      //   : 'particles.json';
 
       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-      particlesJS.load('particles-js', particlesJsonPathToUse, () => {
+      particlesJS.load('particles-js', 'particles.mobile.json?1', () => {
         console.log('callback - particles.js config loaded');
       });
 
