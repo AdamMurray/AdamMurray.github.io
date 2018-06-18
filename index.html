@@ -25,16 +25,16 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P" rel="stylesheet">
 
   <style>
-    @keyframes text-shadow-glow-white {
+    @keyframes text-shadow-glow {
       from {
-        text-shadow: 0px 0px 15px #ffffffab;
+        text-shadow: 0px 0px 15px var(--color-1);
       }
       50% {
-        text-shadow: 0px 0px 35px #ffffffbe;
+        text-shadow: 0px 0px 35px var(--color-2);
       }
       /* ignored */
       to {
-        text-shadow: 0px 0px 15px #ffffffab;
+        text-shadow: 0px 0px 15px var(--color-1);
       }
     }
 
@@ -117,15 +117,31 @@
       /* text-shadow: 0px 0px 15px #ffffffab; */
       line-height: 1.4;
       /* animation: text-shadow-glow-white 2s ease-in 0s infinite; */
+      /* animation: flash--yellow 1s ease-in 0s infinite; */
+    }
+
+    .header__title--yellow {
+      color: black;
+      background: yellow;
     }
 
     .header__subtitle {
+      --color-1: transparent;
+      --color-2: #00d4ff;
       /* Design */
-      font-size: .6em;
+      font-size: .7em;
       text-align: center;
       color: #00d4ff;
       text-shadow: 0px 0px 15px #0e82ff;
       text-transform: uppercase;
+      animation: text-shadow-glow 4s ease-out 0s infinite;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header__subtitle > span {
+        display: block;
+        margin: 8px 0;
+      }
     }
 
     .header__links {
@@ -246,7 +262,9 @@
       </h1>
 
       <h2 class="header__subtitle">
-        +++ front-end engineer for hire +++
+        <span>+++</span>
+        <span>front-end engineer for hire</span>
+        <span>+++</span>
       </h2>
 
       <div class="header__links">
@@ -298,6 +316,44 @@
       particlesJS.load('particles-js', 'particles.mobile.json?1', () => {
         console.log('callback - particles.js config loaded');
       });
+
+      // Get a random number of seconds between 1 and 10, apply and then remove
+      // CSS class on header
+      const title = document.querySelector('.header__title');
+      const randomNumberOfMilliseconds = Math.ceil(Math.random() * 10) * 1000;
+      
+      toggleClassOnElement('header__title--yellow', title);
+      toggleHireMeText();
+
+      function toggleClassOnElement(cls, element) {
+        if (!cls || !element) return;
+        element.classList.toggle(cls);
+        const randomNumberOfMilliseconds1 = Math.max(Math.ceil(Math.random() * 10) * 100, 400);
+        const timeout1 = setTimeout(() => {
+          element.classList.toggle(cls);
+          clearTimeout(timeout1);
+          const randomNumberOfMilliseconds2 = Math.ceil(Math.random() * 10) * 1000;
+          const timeout2 = setTimeout(() => {
+            toggleClassOnElement(cls, element);
+            clearTimeout(timeout2);
+          }, randomNumberOfMilliseconds2);
+        }, randomNumberOfMilliseconds1);
+      }
+
+      function toggleHireMeText() {
+        const hireMeButton = document.querySelector('#hireMe');
+        hireMeButton.innerText = 'Hire Me';
+
+        const randomNumberOfMilliseconds1 = Math.ceil(Math.random() * 10) * 1000;
+        const timeout1 = setTimeout(() => {
+          hireMeButton.innerText = 'Hire Me Now!';
+          clearTimeout(timeout1);
+          const timeout2 = setTimeout(() => {
+            toggleHireMeText();
+            clearTimeout(timeout2);
+          }, 500);
+        }, randomNumberOfMilliseconds1);
+      }
 
     })();
   </script>
