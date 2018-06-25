@@ -93,7 +93,6 @@
       display: grid;
       z-index: 2;
       background: rgba(0, 0, 0, 0.3);
-      pointer-events: none;
     }
 
     .header {
@@ -114,10 +113,7 @@
       color: white;
       font-size: 2em;
       padding: 20px;
-      /* text-shadow: 0px 0px 15px #ffffffab; */
       line-height: 1.4;
-      /* animation: text-shadow-glow-white 2s ease-in 0s infinite; */
-      /* animation: flash--yellow 1s ease-in 0s infinite; */
     }
 
     .header__title--yellow {
@@ -132,9 +128,9 @@
       font-size: .7em;
       text-align: center;
       color: #00d4ff;
-      text-shadow: 0px 0px 15px #0e82ff;
+      /* text-shadow: 0px 0px 15px #0e82ff; */
       text-transform: uppercase;
-      animation: text-shadow-glow 4s ease-out 0s infinite;
+      /* animation: text-shadow-glow 4s ease-out 0s infinite; */
     }
 
     @media screen and (max-width: 500px) {
@@ -181,65 +177,62 @@
       background: #eb12ff;
     }
 
-    /** CV ********************************************************************/
+    /**************************************************************************/
 
-    .cv {
-      border-top: 1px solid white;
+    .github-link-avatar {
+      position: fixed;
+      top: 0;
+      left: 10%;
+      transform: translate3d(0, -100%, 0);
+      z-index: 100;
+      transition: transform 2s ease-out;
+      cursor: pointer;
     }
 
-    .cv__section {
-      padding: 20px;
-      margin: 0 auto;
-      background: #151515;
-      border-bottom: 1px solid white;
+    .github-link-avatar--show {
+      transform: translate3d(0, 0, 0);
     }
 
-    .cv__section--experience {
-      background: #151515;
+    .github-link-avatar__avatar {
+      width: 150px;
+      height: auto;
+    }
+    
+    .github-link-avatar__avatar img {
+      width: 100%;
     }
 
-    .cv__section--education .cv__experience__year {
-      color: #00dcff;
-    }
-
-    .cv__section h3 {
-      color: white;
-      font-size: 1.2em;
-      text-transform: uppercase;
-    }
-
-    .cv__subsection {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .cv__experience {
-      margin-top: 20px;
-      color: white;
-      font-family: 'Roboto Mono', sans-serif;
-    }
-
-    .cv__experience__year {
-      font-size: .9em;
-      color: #eb12ff;
-      margin-bottom: 10px;
-    }
-
-    .cv__experience__company {
-      margin-bottom: 5px;
-    }
-
-    .cv__experience__position {
-      font-size: .7em;
-      color: #828282;
-      margin-bottom: 10px;
-    }
-
-    .cv__experience__description {
+    .github-link-avatar__text {
+      background: white;
+      padding: 10px 20px;
+      border: 5px solid black;
+      font-family: 'Press Start 2P', sans-serif;
       font-size: .8em;
-      line-height: 1.4;
-      color: #ddd;
+      border-radius: 8px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0s ease-out 2s;
     }
+
+    .github-link-avatar__text--show {
+      opacity: 1;
+    }
+
+    @media screen and (max-width: 500px) {
+      .github-link-avatar {
+        left: 5px;
+      }
+
+      .github-link-avatar__avatar {
+        width: 100px;
+      }
+
+      .github-link-avatar__text {
+        text-align: left;
+        font-size: .6em;
+      }
+    }
+
   </style>
 </head>
 
@@ -255,6 +248,17 @@
 
   <!-- Header / Banner -->
   <section class="section--main">
+
+    <!-- Github link avatar -->
+    <div class="github-link-avatar">
+      <div class="github-link-avatar__avatar">
+        <img src="spidertocat.png">
+        <div id="github-link-avatar__text" class="github-link-avatar__text">
+          Psst!
+        </div>
+      </div>
+
+    </div>
 
     <div class="header">
       <h1 class="header__title">
@@ -308,6 +312,15 @@
 
       'use strict';
 
+      const githubAvatarTextStrings = [
+        'Psst!',
+        '...',
+        'HEY!',
+        '...',
+        '...',
+        'Wanna see my code?'
+      ];
+
       // var particlesJsonPathToUse = (window.innerWidth < 700)
       //   ? 'particles.mobile.json?1'
       //   : 'particles.json';
@@ -324,6 +337,28 @@
       
       toggleClassOnElement('header__title--yellow', title);
       toggleHireMeText();
+      addListeners();
+
+      const timeout = setTimeout(() => {
+        showGithubAvatar();
+        showGithubAvatarText();
+
+        githubAvatarTextStrings.forEach((string) => {
+          const t = setTimeout(() => {
+            setGithubAvatarText(string);
+            clearTimeout(t);
+          }, 5000);
+        });
+
+        clearTimeout(timeout);
+      }, 2000);
+
+      function addListeners() {
+        const githubAvatar = document.querySelector('.github-link-avatar');
+        githubAvatar.addEventListener('click', () => {
+          window.open('https://github.com/AdamMurray', '_blank');
+        });
+      }
 
       function toggleClassOnElement(cls, element) {
         if (!cls || !element) return;
@@ -353,6 +388,21 @@
             clearTimeout(timeout2);
           }, 500);
         }, randomNumberOfMilliseconds1);
+      }
+
+      function showGithubAvatar() {
+        const githubLinkAvatar = document.querySelector('.github-link-avatar');
+        githubLinkAvatar.classList.add('github-link-avatar--show');
+      }
+
+      function showGithubAvatarText() {
+        const githubAvatarText = document.querySelector('#github-link-avatar__text');
+        githubAvatarText.classList.add('github-link-avatar__text--show');
+      }
+
+      function setGithubAvatarText(newText) {
+        const githubAvatarText = document.querySelector('#github-link-avatar__text');
+        githubAvatarText.innerText = newText;
       }
 
     })();
