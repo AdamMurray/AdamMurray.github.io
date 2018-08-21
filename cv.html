@@ -25,14 +25,21 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Press+Start+2P" rel="stylesheet">
 
   <style>
+    :root {
+      --pink-1: #eb12ff;
+      --purple: #982ffa;
+      --blue: rgb(0, 133, 255);
+      --light-blue: #00dcff;
+    }
+
     ::-moz-selection {
       /* Code for Firefox */
-      color: #eb12ff;
+      color: var(--pink-1);
       background: black;
     }
 
     ::selection {
-      color: #eb12ff;
+      color: var(--pink-1);
       background: black;
     }
 
@@ -43,7 +50,7 @@
     }
 
     body {
-      background: linear-gradient(146deg, #eb12ff, #982ffa, rgb(0, 133, 255), #00dcff);
+      background: linear-gradient(146deg, var(--pink-1), #982ffa, rgb(0, 133, 255), #00dcff);
       background-attachment: fixed;
       font-family: 'Press Start 2P', sans-serif;
     }
@@ -62,14 +69,19 @@
     }
 
     .cv__section {
-      padding: 20px;
+      padding: 10px;
       margin: 0 auto;
       background: #151515;
       /* border-bottom: 1px solid white; */
     }
 
-    .cv__section--experience {
-      background: #151515;
+    .cv__section--header {
+      /* background: #151515; */
+      padding-top: 10%;
+    }
+
+    .cv__section--education {
+      padding-bottom: 10%;
     }
 
     .cv__section--education .cv__experience__year {
@@ -99,9 +111,19 @@
       font-family: 'Roboto Mono', sans-serif;
     }
 
+    .cv__experience ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cv__experience ul li {
+      margin-bottom: 5px;
+      font-size: .8em;
+    }
+
     .cv__experience__year {
       font-size: .9em;
-      color: #eb12ff;
+      color: var(--pink-1);
       margin-bottom: 10px;
     }
 
@@ -130,7 +152,7 @@
   <section id="cv" class="cv">
 
     <!-- Title -->
-    <div class="cv__section cv__section--experience">
+    <div class="cv__section cv__section--header">
       <div class="cv__subsection">
         <h2>Adam Murray</h2>
         <p style="color: white;">
@@ -243,15 +265,16 @@
         <h3>Skills</h3>
 
         <div class="cv__experience">
-          <div>
-            JavaScript
-            > CSS
-            > Polymer
-            > Node
-            > HTML
-            > Gulp
-            > NPM
-          </div>
+          <ul>
+            <li>>>> HTML <span style="color: #777;">... 6+ years</span></li>
+            <li>>>> CSS <span style="color: #777;">... 6+ years</span></li>
+            <li>>>> JavaScript <span style="color: #777;">... 5+ years</span></li>
+            <li>>>> React <span style="color: #777;">... >1 years</span></li>
+            <li>>>> Polymer <span style="color: #777;">... 2 years</span></li>
+            <li>>>> Node <span style="color: #777;">... 1+ years</span></li>
+            <li>>>> Rich UI development <span style="color: #777;">... 4+ years</span></li>
+            <li>>>> Excellent written communication skills</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -287,12 +310,6 @@
     (() => {
 
       'use strict';
-
-      const checkOutMyCvButton = document.getElementById('checkOutMyCv');
-      const cvSection = document.getElementById('cv');
-      checkOutMyCv.addEventListener('click', () => {
-        cvSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
 
       /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
       particlesJS.load('particles-js', 'particles.json', () => {
