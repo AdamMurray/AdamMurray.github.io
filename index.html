@@ -57,7 +57,8 @@
 
     body {
       /* background: linear-gradient(146deg, #eb12ff, #982ffa, rgb(0, 133, 255), #00dcff); */
-      background: linear-gradient(146deg, #000000, #3e0077, rgb(0, 133, 255), #00dcff); /* new colours */
+      background: linear-gradient(146deg, #000000, #3e0077, rgb(0, 133, 255), #00dcff);
+      /* new colours */
       background-attachment: fixed;
       font-family: 'Press Start 2P', sans-serif;
     }
@@ -66,13 +67,16 @@
 
     .copyright {
       font-size: .5em;
-      color: #ffffff;
+      color: #ff0;
       position: absolute;
-      bottom: 20px;
-      left: 20px;
+      bottom: 0;
+      left: 0;
+      right: 0;
       font-weight: 200;
       line-height: 1.4;
       z-index: 100;
+      padding: 20px;
+      /* background: #eb12ff; */
     }
 
     /** Header ****************************************************************/
@@ -94,10 +98,14 @@
       display: grid;
       z-index: 2;
       background: rgba(0, 0, 0, 0.3);
-      border-top: 60px solid #eb13ff;
       box-sizing: border-box;
-      border-bottom: 60px solid #eb13ff;
       color: black;
+    }
+
+    @media screen and (min-width: 600px) {
+      .section--main {
+        border-top: none;
+      }
     }
 
     .header {
@@ -139,7 +147,7 @@
     }
 
     @media screen and (max-width: 500px) {
-      .header__subtitle > span {
+      .header__subtitle>span {
         display: block;
         margin: 8px 0;
       }
@@ -180,6 +188,7 @@
 
     #hireMe {
       background: #eb12ff;
+      box-shadow: 0px 0px 20px 0px #ffffff8c;
     }
 
     /**************************************************************************/
@@ -202,7 +211,7 @@
       width: 150px;
       height: auto;
     }
-    
+
     .github-link-avatar__avatar img {
       width: 100%;
     }
@@ -210,10 +219,9 @@
     .github-link-avatar__text {
       background: white;
       padding: 10px 20px;
-      /* border: 5px solid black; */
       font-family: 'Press Start 2P', sans-serif;
       font-size: .8em;
-      border-radius: 8px;
+      /* border-radius: 8px; */
       text-align: center;
       opacity: 0;
       transition: opacity 0s ease-out 2s;
@@ -221,11 +229,12 @@
 
     .github-link-avatar__text--show {
       opacity: 1;
+      box-shadow: 0 0 20px #ffffff8c;
     }
 
     @media screen and (max-width: 500px) {
       .github-link-avatar {
-        left: 5px;
+        left: 10px;
       }
 
       .github-link-avatar__avatar {
@@ -238,7 +247,6 @@
         line-height: 1.5;
       }
     }
-
   </style>
 </head>
 
@@ -340,7 +348,7 @@
       // CSS class on header
       const title = document.querySelector('.header__title');
       const randomNumberOfMilliseconds = Math.ceil(Math.random() * 10) * 1000;
-      
+
       toggleClassOnElement('header__title--yellow', title);
       toggleHireMeText();
       addListeners();
