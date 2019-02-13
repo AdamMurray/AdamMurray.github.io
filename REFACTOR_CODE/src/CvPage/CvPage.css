@@ -1,0 +1,100 @@
+:root {
+  --pink-1: #eb12ff;
+  --purple: #982ffa;
+  --blue: rgb(0, 133, 255);
+  --light-blue: #00dcff;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--pink-1);
+  background: black;
+}
+
+::selection {
+  color: var(--pink-1);
+  background: black;
+}
+
+/** CV ********************************************************************/
+
+.cv {
+  height: 100%;
+  font-size: 16px;
+  background-attachment: fixed;
+  font-family: 'Press Start 2P';
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  background: #151515;
+}
+
+.cv__section {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.cv__section--header {
+  padding-top: 10%;
+}
+
+.cv__section--education {
+  padding-bottom: 10%;
+}
+
+.cv__section--education .cv__experience__year {
+  color: #00dcff;
+}
+
+.cv__section h2 {
+  color: white;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.cv__section h3 {
+  color: white;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.cv__subsection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cv__experience {
+  margin-top: 20px;
+  color: white;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+.cv__experience ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cv__experience ul li {
+  margin-bottom: 5px;
+  font-size: 0.8em;
+}
+
+.cv__experience__year {
+  font-size: 0.9em;
+  color: var(--pink-1);
+  margin-bottom: 10px;
+}
+
+.cv__experience__company {
+  margin-bottom: 5px;
+}
+
+.cv__experience__position {
+  font-size: 0.7em;
+  color: #828282;
+  margin-bottom: 10px;
+}
+
+.cv__experience__description {
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: #ddd;
+}

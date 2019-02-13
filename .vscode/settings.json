@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  // Disable for Prettier
+  "javascript.format.enable": false,
+  "prettier.disableLanguages": ["handlebars", "hbs"],
+  "[handlebars]": { "editor.formatOnSave": false }
+}
