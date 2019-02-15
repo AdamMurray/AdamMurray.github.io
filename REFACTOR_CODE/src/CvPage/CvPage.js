@@ -29,7 +29,8 @@ export class CvPage extends Component {
             <p
               className={css`
                 color: #f268ff;
-                margin: 0;
+                margin-top: 10px;
+                text-transform: uppercase;
               `}
             >
               Curriculum Vitae
@@ -39,7 +40,7 @@ export class CvPage extends Component {
 
         <div className="cv__section cv__section--experience">
           <div className="cv__subsection">
-            <h3>Bio</h3>
+            <h3>Biography</h3>
 
             <div className="cv__experience">
               <div className="cv__experience__description">
@@ -53,8 +54,10 @@ export class CvPage extends Component {
                   and technologies.
                 </p>
                 <p>
-                  Currently a freelance front-end engineer based in London, on
-                  the lookout for interesting remote contracts.
+                  Currently a freelance web developer based in London,
+                  specialising in complex front-end application development
+                  using React and associated tooling. On the lookout for
+                  interesting remote contracts.
                 </p>
               </div>
             </div>
@@ -66,9 +69,19 @@ export class CvPage extends Component {
             <h3>Experience</h3>
 
             <div className="cv__experience">
-              <div className="cv__experience__year">2016 - 2018</div>
-              <div className="cv__experience__company">Synthace Ltd</div>
-              <div className="cv__experience__position">Front End Engineer</div>
+              <div className="cv__experience__year">2016-2018</div>
+              <div className="cv__experience__company">
+                <span
+                  className={css`
+                    font-weight: bold;
+                  `}
+                >
+                  Synthace Ltd{' '}
+                </span>
+                <span className="cv__experience__position">
+                  | Front-end Engineer
+                </span>
+              </div>
               <div className="cv__experience__description">
                 <p>
                   Worked as part of a cross-disciplinary team of software
@@ -84,11 +97,22 @@ export class CvPage extends Component {
             </div>
 
             <div className="cv__experience">
-              <div className="cv__experience__year">2015 - 2016</div>
-              <div className="cv__experience__company">IntelligentPOS</div>
-              <div className="cv__experience__position">
-                Front End Technical Lead
+              <div className="cv__experience__year">2015-2016</div>
+              <div className="cv__experience__company">
+                <span
+                  className={css`
+                    font-weight: bold;
+                  `}
+                >
+                  IntelligentPOS{' '}
+                </span>
+                <span className="cv__experience__position">
+                  | Front-end Technical Lead
+                </span>
               </div>
+              {/* <div className="cv__experience__position">
+                Front End Technical Lead
+              </div> */}
               <div className="cv__experience__description">
                 <p>
                   Led development of primary client-facing web application.
@@ -106,11 +130,22 @@ export class CvPage extends Component {
             </div>
 
             <div className="cv__experience">
-              <div className="cv__experience__year">2013 - 2015</div>
-              <div className="cv__experience__company">Geeks Ltd</div>
-              <div className="cv__experience__position">
-                Junior software engineer
+              <div className="cv__experience__year">2013-2015</div>
+              <div className="cv__experience__company">
+                <span
+                  className={css`
+                    font-weight: bold;
+                  `}
+                >
+                  Geeks Ltd{' '}
+                </span>
+                <span className="cv__experience__position">
+                  | Junior Software Engineer
+                </span>
               </div>
+              {/* <div className="cv__experience__position">
+                Junior Software Engineer
+              </div> */}
               <div className="cv__experience__description">
                 Developed bespoke web applications for a range of clients,
                 primarily using Microsoft .NET technologies and an in-house
@@ -127,76 +162,76 @@ export class CvPage extends Component {
             <div className="cv__experience">
               <ul>
                 <li>
-                  >>> HTML
+                  HTML
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... 6+ years
+                    {' -'} 6+ years
                   </span>
                 </li>
                 <li>
-                  >>> CSS
+                  CSS
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... 6+ years
+                    {' -'} 6+ years
                   </span>
                 </li>
                 <li>
-                  >>> JavaScript
+                  JavaScript
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... 5+ years
+                    {' -'} 5+ years
                   </span>
                 </li>
                 <li>
-                  >>> React
+                  React
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... >1 years
+                    {' -'} >1 years
                   </span>
                 </li>
                 <li>
-                  >>> Polymer
+                  Polymer
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... 2 years
+                    {' -'} 2 years
                   </span>
                 </li>
                 <li>
-                  >>> Node
+                  Node
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... 1+ years
+                    {' -'} 1+ years
                   </span>
                 </li>
                 <li>
-                  >>> Rich UI development
+                  Rich UI development
                   <span
                     className={css`
                       color: #777;
                     `}
                   >
-                    ... 4+ years
+                    {' -'} 4+ years
                   </span>
                 </li>
-                <li>>>> Excellent written communication skills</li>
+                <li>Excellent written communication skills</li>
               </ul>
             </div>
           </div>
@@ -207,7 +242,7 @@ export class CvPage extends Component {
             <h3>Education</h3>
 
             <div className="cv__experience">
-              <div className="cv__experience__year">2008 - 2012</div>
+              <div className="cv__experience__year">2008-2012</div>
               <div className="cv__experience__company">
                 University of Glasgow
               </div>

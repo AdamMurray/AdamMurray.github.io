@@ -1,5 +1,5 @@
 :root {
-  --pink-1: #eb12ff;
+  --pink-1: #f268ff;
   --purple: #982ffa;
   --blue: rgb(0, 133, 255);
   --light-blue: #00dcff;
@@ -8,12 +8,12 @@
 ::-moz-selection {
   /* Code for Firefox */
   color: var(--pink-1);
-  background: black;
+  background: #222;
 }
 
 ::selection {
   color: var(--pink-1);
-  background: black;
+  background: #222;
 }
 
 /** CV ********************************************************************/
@@ -22,13 +22,13 @@
   height: 100%;
   font-size: 16px;
   background-attachment: fixed;
-  font-family: 'Press Start 2P';
+  /* font-family: 'Press Start 2P'; */
   font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  background: #151515;
+  background: #222;
 }
 
 .cv__section {
-  padding: 10px;
+  padding: 5px 10px;
   margin: 0 auto;
 }
 
@@ -45,15 +45,18 @@
 }
 
 .cv__section h2 {
+  font-family: 'Rozha One', serif;
   color: white;
-  font-size: 1.6em;
+  font-size: 3em;
   text-transform: uppercase;
 }
 
 .cv__section h3 {
+  font-family: 'Rozha One', serif;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.6em;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .cv__subsection {
@@ -62,25 +65,27 @@
 }
 
 .cv__experience {
-  margin-top: 20px;
+  margin-top: 10px;
   color: white;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .cv__experience ul {
   list-style: none;
   padding: 0;
+  /* font-family: 'Roboto One', monospace; */
 }
 
 .cv__experience ul li {
   margin-bottom: 5px;
-  font-size: 0.8em;
+  font-size: 1em;
 }
 
 .cv__experience__year {
-  font-size: 0.9em;
+  font-size: 1em;
   color: var(--pink-1);
   margin-bottom: 10px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .cv__experience__company {
@@ -88,13 +93,13 @@
 }
 
 .cv__experience__position {
-  font-size: 0.7em;
+  /* font-size: 0.9em; */
   color: #828282;
   margin-bottom: 10px;
 }
 
 .cv__experience__description {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.4;
   color: #ddd;
 }

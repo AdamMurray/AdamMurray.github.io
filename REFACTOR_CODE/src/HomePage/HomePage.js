@@ -24,13 +24,41 @@ const HomePageWrapper = styled.div`
     rgb(0, 133, 255),
     #00dcff
   );
+`
+
+const BackgroudImageWrapper = styled.div`
+  height: 100vh;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  background: linear-gradient(
+    146deg,
+    #000000,
+    #3e0077,
+    rgb(0, 133, 255),
+    #00dcff
+  );
   background-attachment: fixed;
   background-image: url('/img/joel-filipe.jpg');
   background-position: 50% 50%;
   background-size: 100%;
+  background-color: #03178f;
+  transform: scale(1);
+  animation: grow-bg 60s linear infinite;
 
   @media screen and (max-width: 500px) {
     background-size: 160%;
+  }
+
+  @keyframes grow-bg {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 `
 
@@ -56,7 +84,7 @@ const Main = styled.main`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 100vh;
   display: grid;
   z-index: 2;
   background: rgba(0, 0, 0, 0.3);
@@ -92,8 +120,22 @@ const HeaderSubtitle = styled.h2`
   font-style: italic;
   color: #fefefe;
   padding: 15px 20px;
-  background: black;
+  background: #000;
   text-transform: uppercase;
+  animation: grow 20s ease infinite;
+  transform: scale(1);
+
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 `
 
 const HeaderLinks = styled.div`
@@ -146,6 +188,8 @@ export class HomePage extends Component {
   render() {
     return (
       <HomePageWrapper>
+        <BackgroudImageWrapper />
+
         <Copyright>
           <div>Adam John Campbell Murray</div>
           <div>© Copyright 2018</div>
