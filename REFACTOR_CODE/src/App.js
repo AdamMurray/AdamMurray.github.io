@@ -43,11 +43,14 @@ class App extends Component {
         {/* NAV BAR | Home, CV links */}
         <Nav>
           <NavLink>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </NavLink>
           <NavLink>
             <Link to="/cv">CV</Link>
           </NavLink>
+          {/* <NavLink>
+            <Link to ="/my-work-tools">My Tools</Link>
+          </NavLink> */}
         </Nav>
         <Routes />
       </>

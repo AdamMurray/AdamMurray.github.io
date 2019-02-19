@@ -10,9 +10,10 @@ const Main = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #111;
+  background: #222;
   color: #fefefe;
-  font-family: 'Press Start 2P';
+  // font-family: 'Press Start 2P';
+  font-family: 'Roboto Mono', monospace;
   padding: 0 14vw;
 `
 

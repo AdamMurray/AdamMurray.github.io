@@ -9,10 +9,10 @@ export class Routes extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/home" component={HomePage} />
         <Route exact path="/cv" component={CvPage} />
         <Route exact path="/my-work-tools" component={MyWorkToolsPage} />
-        <Route render={() => <Redirect to="/" />} />
+        <Route render={() => <Redirect to="/home" />} />
       </Switch>
     )
   }

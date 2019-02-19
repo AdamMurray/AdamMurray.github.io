@@ -24,6 +24,7 @@ const HomePageWrapper = styled.div`
     rgb(0, 133, 255),
     #00dcff
   );
+  overflow: hidden;
 `
 
 const BackgroudImageWrapper = styled.div`
