@@ -57,7 +57,7 @@ export class CvPage extends Component {
                   Currently a freelance web developer based in London,
                   specialising in complex front-end application development
                   using React and associated tooling. On the lookout for
-                  interesting remote contracts.
+                  interesting full-time opportunities.
                 </p>
               </div>
             </div>
